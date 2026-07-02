@@ -6,6 +6,7 @@ import { Footer } from "@/components/portfolio/sections";
 import MechanicHero from "@/components/portfolio/mechanic-detail/MechanicHero";
 import MechanicPreview from "@/components/portfolio/mechanic-detail/MechanicPreview";
 import MechanicOverview from "@/components/portfolio/mechanic-detail/MechanicOverview";
+import MechanicAddons from "@/components/portfolio/mechanic-detail/MechanicAddons";
 import TechnicalBreakdown from "@/components/portfolio/mechanic-detail/TechnicalBreakdown";
 import ImplementationFlow from "@/components/portfolio/mechanic-detail/ImplementationFlow";
 import ImplementationSteps from "@/components/portfolio/mechanic-detail/ImplementationSteps";
@@ -35,6 +36,7 @@ export default function MechanicDetail() {
         <MechanicHero mechanic={mechanic} />
         <MechanicPreview mechanic={mechanic} />
         <MechanicOverview mechanic={mechanic} />
+        <MechanicAddons mechanic={mechanic} />
         <TechnicalBreakdown mechanic={mechanic} />
         <ImplementationFlow mechanic={mechanic} />
         <ImplementationSteps mechanic={mechanic} />

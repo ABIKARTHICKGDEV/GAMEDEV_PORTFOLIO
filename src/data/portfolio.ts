@@ -81,6 +81,9 @@ export interface GameplayMechanic {
   usedIn?: string;
   benefit?: string;
   experience?: string;
+  features?: string[];
+  technologies?: string[];
+  learnings?: string[];
 }
 
 
@@ -159,7 +162,7 @@ export const portfolio: PortfolioConfig = {
     email: "Abikarthick.gdev@gmail.com",
     linkedin: "https://www.linkedin.com/in/abikarthick",
     github: "https://github.com/ABIKARTHICKGDEV",
-    photo: "/avatar.jpg",
+    photo: "https://github.com/ABIKARTHICKGDEV.png",
     location: "Tamil Nadu, India",
     availability: "Open to Internship & Entry-Level Opportunities",
   },
@@ -675,10 +678,95 @@ export const portfolio: PortfolioConfig = {
     },
     {
       id: "third-person-shooting",
-      title: "Third Person Shooting",
-      engine: "Unreal Engine",
-      description: "Over-the-shoulder aim, hitscan + projectile weapons, and animation-driven recoil.",
-      media: {},
+      title: "🎮 Third-Person Shooting System",
+      engine: "Unity",
+      category: "Gameplay System",
+      difficulty: "Intermediate",
+      engineVersion: "Unity 6",
+      description:
+        "Built a Third-Person Projectile Shooting System in Unity 6 as a gameplay programming prototype to explore core third-person shooter mechanics. This project focuses on implementing aiming, projectile physics, raycast-based target detection, character rotation, and hit effects while integrating with Unity Starter Assets and Cinemachine.",
+      purpose:
+        "This prototype was built as part of my Gameplay Programming Devlog series to strengthen my understanding of third-person shooter mechanics by implementing the core gameplay systems from scratch and integrating them with Unity's Starter Assets.",
+      usedIn: "Gameplay programming devlogs, Unity Starter Assets shooter controller, and prototype templates.",
+      benefit:
+        "Hands-on experience implementing over-the-shoulder cameras, clean gameplay architecture, and rigidbody projectile collision dynamics.",
+      experience:
+        "Delivers responsive character aiming, camera shoulder swapping, smooth zoom transitions, and dynamic impact particles.",
+      media: {
+        preview: "GamePlay_Machnics/Thirdperson_shooter/cover.png",
+        hoverVideo: "GamePlay_Machnics/Thirdperson_shooter/Gameplay_loop.mp4",
+        video: "GamePlay_Machnics/Thirdperson_shooter/Gameplay.mp4",
+      },
+      links: {
+        github: "https://github.com/ABIKARTHICKGDEV/Third-Person-Shooting-System",
+      },
+      articleUrl:
+        "https://www.linkedin.com/posts/abikarthick_i-recently-built-a-third-person-projectile-activity-7477078553465880577-Mdzu",
+      features: [
+        "Cinemachine Aim Camera",
+        "Rigidbody-based Projectile Shooting",
+        "Screen-Center Raycasting",
+        "Character Rotation Towards Aim Direction",
+        "Different Hit Effects for Targets and Environment",
+        "Smooth Aim Transition",
+        "Unity Starter Assets Integration",
+      ],
+      technologies: [
+        "Unity 6",
+        "C#",
+        "Cinemachine",
+        "Unity Starter Assets",
+        "Rigidbody Physics",
+        "Physics Raycasting",
+      ],
+      learnings: [
+        "Third-Person Camera Systems",
+        "Gameplay Programming",
+        "Projectile Physics",
+        "Raycasting",
+        "Collision Detection",
+        "Unity Input System",
+        "Character Rotation",
+        "Clean Gameplay Architecture",
+      ],
+      gallery: {
+        gameplay: ["GamePlay_Machnics/Thirdperson_shooter/cover.png"],
+        development: [
+          "GamePlay_Machnics/Thirdperson_shooter/code1.png",
+          "GamePlay_Machnics/Thirdperson_shooter/code2.png",
+        ],
+      },
+      flow:
+        "Receive input for aiming / shooting\nTransition camera to over-the-shoulder view\nRaycast from screen center to find target point\nRotate character toward aiming direction\nSpawn projectile and apply rigidbody force\nTrigger hit effects on impact",
+      architecture:
+        "PlayerController → ThirdPersonShooterController → ProjectileGun → RigidbodyProjectile → CinemachineVirtualCamera",
+      breakdown: [
+        "Cinemachine Aim Camera",
+        "Screen-Center Raycasting",
+        "Projectile Physics (Rigidbody)",
+        "Character Aim Rotation",
+        "Dynamic Hit Effect Spawning",
+      ],
+      steps: [
+        "Set up Cinemachine virtual cameras (Follow & Aim)",
+        "Read input via Unity Input System (Aim & Shoot)",
+        "Implement Screen-Center Raycast target detection",
+        "Configure Rigidbody projectile prefab with forward force",
+        "Code smooth character rotation to match screen center",
+        "Instantiate hit particles based on target tags (Target vs Env)",
+      ],
+      challenges: [
+        {
+          challenge: "Screen-Center Raycast alignment when player is close to walls",
+          solution:
+            "Implemented a minimum range check and offset the raycast start position forward from the character's camera viewport to prevent raycasts from clipping through near geometry.",
+        },
+        {
+          challenge: "Smooth transition between follow camera and aim camera views",
+          solution:
+            "Used Cinemachine camera blending with custom damping values and dynamically updated the player's mouse sensitivity dynamically when aiming is active.",
+        },
+      ],
     },
     {
       id: "enemy-ai",

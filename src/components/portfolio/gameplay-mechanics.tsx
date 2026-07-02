@@ -77,19 +77,13 @@ function MechanicCard({ mechanic: m }: { mechanic: GameplayMechanic }) {
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Cover */}
-      <div className="relative h-[160px] overflow-hidden border-b border-white/5">
+      <Link
+        to={`/mechanics/${m.id}`}
+        className="cover-zoom relative block h-[160px] overflow-hidden border-b border-white/5"
+      >
         <div className="cover-img absolute inset-0 bg-gradient-to-br from-[#32353D] via-[#2B2E35] to-[#1B1B1F]" />
         <div className="absolute inset-0 grid-bg opacity-30" />
-        {previewVideo && !showHoverMedia ? (
-          <video
-            src={asset(previewVideo)}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        ) : previewImg ? (
+        {previewImg ? (
           <>
             <img
               src={asset(previewImg)}
@@ -135,7 +129,7 @@ function MechanicCard({ mechanic: m }: { mechanic: GameplayMechanic }) {
             {m.engine}
           </span>
         </div>
-      </div>
+      </Link>
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-3">

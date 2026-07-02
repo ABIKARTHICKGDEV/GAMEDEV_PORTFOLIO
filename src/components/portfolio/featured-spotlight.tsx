@@ -14,7 +14,7 @@ export function FeaturedSpotlight() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isVideoActive, setIsVideoActive] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   const mediaVideo = project.media?.video;
   const mediaHoverVideo = project.media?.hoverVideo;
@@ -30,11 +30,11 @@ export function FeaturedSpotlight() {
     setIsPlaying(false);
     setIsHovering(false);
     setIsVideoActive(false);
-    setIsMuted(true);
+    setIsMuted(false);
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
-      videoRef.current.muted = true;
+      videoRef.current.muted = false;
     }
   }, [project.id]);
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { asset } from "@/lib/asset";
-import { Github, Play, BookOpen, Code2 } from "lucide-react";
+import { Github, Play, BookOpen, Code2, Linkedin } from "lucide-react";
 import { GameplayMechanic } from "@/data/portfolio";
 
 export default function MechanicHero({ mechanic }: { mechanic: GameplayMechanic }) {
@@ -55,6 +55,16 @@ export default function MechanicHero({ mechanic }: { mechanic: GameplayMechanic 
                 className="btn-steam inline-flex items-center gap-2 px-4 py-2"
               >
                 <Play className="h-4 w-4" /> Live Demo
+              </a>
+            ) : null}
+            {mechanic.articleUrl ? (
+              <a
+                href={mechanic.articleUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost-steam inline-flex items-center gap-2 px-4 py-2"
+              >
+                <Linkedin className="h-4 w-4 text-[#0A66C2]" /> LinkedIn Devlog
               </a>
             ) : null}
             {mechanic.docsUrl ? (
