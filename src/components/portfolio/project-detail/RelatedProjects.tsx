@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { portfolio } from "@/data/portfolio";
 import { asset } from "@/lib/asset";
 
@@ -15,7 +15,7 @@ export default function RelatedProjects({ projectId }: { projectId: string }) {
             <div className="mt-2 font-semibold">{p.title}</div>
             <div className="text-sm text-muted-foreground">{p.category}</div>
             <div className="mt-3">
-              <a href={`/projects/${p.id}`} className="btn-ghost-steam inline-flex items-center gap-2 px-3 py-1.5">View Project</a>
+              <Link to={`/projects/${p.id}`} className="btn-ghost-steam inline-flex items-center gap-2 px-3 py-1.5">View Project</Link>
             </div>
           </div>
         ))}
