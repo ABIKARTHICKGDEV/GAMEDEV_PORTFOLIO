@@ -5,6 +5,7 @@ import { useState } from "react";
 import { portfolio } from "@/data/portfolio";
 import { asset } from "@/lib/asset";
 import { ThemeSwitcher } from "@/components/portfolio/theme-switcher";
+import { siteConfig } from "@/config/site";
 
 const NAV = [
   { label: "Home", href: "#top" },
@@ -22,7 +23,7 @@ export function Nav() {
   const isHomeRoute = location.pathname === "/";
   const navItems = NAV.map((item) => ({
     ...item,
-    href: isHomeRoute ? item.href : `/${item.href}`,
+    href: isHomeRoute ? item.href : `${siteConfig.basePath}${item.href}`,
   }));
 
   return (
