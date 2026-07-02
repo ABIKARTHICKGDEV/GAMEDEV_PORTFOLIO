@@ -8,12 +8,12 @@ const rawBase = import.meta.env.BASE_URL || "/";
 const basePath = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
 
 export const siteConfig = {
-  /** Always ends with a slash, e.g. "/nebula-shift-dev/" or "/". */
+  /** Always ends with a slash, e.g. "/GAMEDEV_PORTFOLIO/" or "/". */
   basePath,
   /** Public origin + base, no trailing slash. Used for OG/canonical/sitemap. */
   siteUrl: (
     import.meta.env.VITE_SITE_URL ??
-    "https://github.com/ABIKARTHICKGDEV/nebula-shift-dev"
+    "https://github.com/ABIKARTHICKGDEV/GAMEDEV_PORTFOLIO"
   ).replace(/\/$/, ""),
   name: "Abikarthick G — Game Developer Portfolio",
   shortName: "Abikarthick G",

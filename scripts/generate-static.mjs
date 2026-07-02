@@ -3,7 +3,7 @@
 // before `vite build` (see package.json scripts).
 //
 // Env:
-//   VITE_BASE_PATH   – e.g. "/nebula-shift-dev/" (must start and end with /)
+//   VITE_BASE_PATH   – e.g. "/GAMEDEV_PORTFOLIO/" (must start and end with /)
 //   VITE_SITE_URL    – public origin + base, no trailing slash
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -13,14 +13,14 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-const rawBase = process.env.VITE_BASE_PATH ?? "/nebula-shift-dev/";
+const rawBase = process.env.VITE_BASE_PATH ?? "/GAMEDEV_PORTFOLIO/";
 const basePath = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
 const siteUrl = (
-  process.env.VITE_SITE_URL ?? "https://github.com/ABIKARTHICKGDEV/nebula-shift-dev"
+  process.env.VITE_SITE_URL ?? "https://github.com/ABIKARTHICKGDEV/GAMEDEV_PORTFOLIO"
 ).replace(/\/$/, "");
 
 // pathSegmentsToKeep = number of non-empty segments in the base.
-// "/nebula-shift-dev/" → 1, "/" → 0.
+// "/GAMEDEV_PORTFOLIO/" → 1, "/" → 0.
 const segments = basePath.split("/").filter(Boolean);
 const pathSegmentsToKeep = segments.length;
 
