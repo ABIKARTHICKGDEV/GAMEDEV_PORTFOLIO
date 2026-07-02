@@ -1,0 +1,329 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Steam-storefront theme
+   ───────────────────────────────────────────────────────────────────────── */
+
+@theme inline {
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+}
+
+:root,
+[data-theme="studio"] {
+  --radius: 0.5rem;
+
+  --background: #1B1B1F;
+  --foreground: #FFFFFF;
+
+  --surface: #23252B;
+  --surface-2: #2B2E35;
+  --card-hover: #32353D;
+
+  --card: #2B2E35;
+  --card-foreground: #FFFFFF;
+  --popover: #23252B;
+  --popover-foreground: #FFFFFF;
+
+  --primary: #7C8A99;
+  --primary-foreground: #FFFFFF;
+  --primary-gradient-from: #8B98A6;
+  --primary-gradient-to: #5E6B7A;
+  --secondary: #2B2E35;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2B2E35;
+  --muted-foreground: #B9BDC5;
+  --accent: #4CD18C;
+  --accent-foreground: #0E1A12;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: rgba(255, 255, 255, 0.06);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #4CD18C;
+
+  --nav-bg: rgba(27, 27, 31, 0.85);
+  --hairline: rgba(255, 255, 255, 0.06);
+  --hairline-strong: rgba(255, 255, 255, 0.10);
+  --grid-line: rgba(255, 255, 255, 0.025);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 18px 40px -18px rgba(0, 0, 0, 0.8);
+  --section-overlay: rgba(27, 27, 31, 0.72);
+  color-scheme: dark;
+}
+
+/* Steam — classic Steam storefront blue */
+[data-theme="steam"] {
+  --background: #1B2838;
+  --foreground: #FFFFFF;
+
+  --surface: #16202D;
+  --surface-2: #2A475E;
+  --card-hover: #335A7E;
+
+  --card: #2A475E;
+  --card-foreground: #FFFFFF;
+  --popover: #16202D;
+  --popover-foreground: #FFFFFF;
+
+  --primary: #66C0F4;
+  --primary-foreground: #0B1622;
+  --primary-gradient-from: #66C0F4;
+  --primary-gradient-to: #1A9FFF;
+  --secondary: #2A475E;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A475E;
+  --muted-foreground: #B8C7D8;
+  --accent: #66C0F4;
+  --accent-foreground: #0B1622;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: rgba(102, 192, 244, 0.10);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #66C0F4;
+
+  --nav-bg: rgba(22, 32, 45, 0.85);
+  --hairline: rgba(102, 192, 244, 0.10);
+  --hairline-strong: rgba(102, 192, 244, 0.20);
+  --grid-line: rgba(102, 192, 244, 0.04);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 18px 40px -18px rgba(0, 0, 0, 0.8);
+  --section-overlay: rgba(22, 32, 45, 0.72);
+  color-scheme: dark;
+}
+
+/* Forest — moss & pine */
+[data-theme="forest"] {
+  --background: #0F1A14;
+  --foreground: #F0F6F0;
+
+  --surface: #16241C;
+  --surface-2: #1F3328;
+  --card-hover: #2A4636;
+
+  --card: #16241C;
+  --card-foreground: #F0F6F0;
+  --popover: #16241C;
+  --popover-foreground: #F0F6F0;
+
+  --primary: #6EE7A8;
+  --primary-foreground: #0F1A14;
+  --primary-gradient-from: #7EF0B5;
+  --primary-gradient-to: #2F9166;
+  --secondary: #1F3328;
+  --secondary-foreground: #F0F6F0;
+  --muted: #1F3328;
+  --muted-foreground: #B5CFC0;
+  --accent: #E8C766;
+  --accent-foreground: #0F1A14;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: rgba(110, 231, 168, 0.10);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #6EE7A8;
+
+  --nav-bg: rgba(15, 26, 20, 0.85);
+  --hairline: rgba(110, 231, 168, 0.10);
+  --hairline-strong: rgba(110, 231, 168, 0.20);
+  --grid-line: rgba(110, 231, 168, 0.04);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 14px 28px -14px rgba(0, 0, 0, 0.7);
+  --section-overlay: rgba(15, 26, 20, 0.72);
+  color-scheme: dark;
+}
+
+.dark {
+  /* Legacy hook — themes set their own color-scheme */
+}
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 250ms ease, color 250ms ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .text-balance { text-wrap: balance; }
+
+  /* Matte panels (legacy glass class names re-skinned) */
+  .glass {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+  }
+  .glass-strong {
+    background: linear-gradient(180deg, var(--surface-2) 0%, var(--surface) 100%);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* No-op stubs for legacy decorative classes */
+  .neon-border { box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 25%, transparent); }
+  .neon-text { color: var(--primary); }
+  .text-gradient {
+    background: linear-gradient(180deg, var(--foreground) 0%, var(--muted-foreground) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .scanlines::before { content: ""; position: absolute; inset: 0; pointer-events: none; }
+  .grid-bg {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* Steam interactions */
+  .card-lift {
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, border-color 200ms ease;
+  }
+  .card-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
+  }
+  .cover-zoom { overflow: hidden; }
+  .cover-zoom > img,
+  .cover-zoom > .cover-img {
+    transition: transform 500ms ease;
+  }
+  .cover-zoom:hover > img,
+  .cover-zoom:hover > .cover-img {
+    transform: scale(1.05);
+  }
+
+  /* Themed CTA — solid charcoal with green accent on hover */
+  .btn-steam {
+    background: var(--surface-2);
+    color: var(--foreground);
+    border: 1px solid var(--hairline-strong);
+    transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+  }
+  .btn-steam:hover {
+    background: var(--card-hover);
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+  }
+  .btn-steam:active { transform: translateY(0); }
+
+  .btn-ghost-steam {
+    background: transparent;
+    color: var(--muted-foreground);
+    border: 1px solid var(--hairline-strong);
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease;
+  }
+  .btn-ghost-steam:hover {
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    transform: translateY(-2px);
+  }
+
+  .bg-nav { background-color: var(--nav-bg); }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 35%, transparent); }
+    50%      { box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 60%, transparent); }
+  }
+  .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+  .animate-float { animation: float-y 8s ease-in-out infinite; }
+
+
+  /* Hide scrollbar but keep scrollability for horizontal rows */
+  .scroll-row {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
+  .scroll-row::-webkit-scrollbar { height: 8px; }
+  .scroll-row::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+  }
+
+  /* Section background image system — visible image with a light blur and tinted overlay */
+  .section-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .section-bg::before {
+    content: "";
+    position: absolute;
+    inset: -2%;
+    background-image: var(--section-bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px) saturate(1.05);
+    opacity: 0.55;
+    transform: scale(1.04);
+  }
+  .section-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(120% 80% at 50% 0%, transparent 0%, var(--section-overlay) 70%),
+      linear-gradient(180deg, var(--section-overlay) 0%, var(--background) 100%);
+  }
+}

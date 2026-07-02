@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abikarthick G — Unity Game Developer & Gameplay Programmer</title>
+    <meta
+      name="description"
+      content="Portfolio of Abikarthick G — Unity game developer, gameplay programmer, and game designer. Play my games, view projects, and download resume."
+    />
+    <meta name="theme-color" content="#1B1B1F" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="alternate icon" href="./favicon.ico" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Abikarthick G — Unity Game Developer" />
+    <meta
+      property="og:description"
+      content="Unity, C#, and gameplay programming portfolio. Playable itch.io builds, project case studies, and live GitHub activity."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--
+      SPA GitHub Pages redirect decode (rafgraph/spa-github-pages).
+      Pairs with public/404.html. Restores the real path before React boots
+      so BrowserRouter can match. Safe no-op when no redirect query is present.
+    -->
+    <script>
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
+          );
+        }
+      })(window.location);
+    </script>
+    <script>
+      // Apply persisted theme before paint to avoid FOUC.
+      (function () {
+        try {
+          var t = localStorage.getItem("portfolio-theme") || "steam";
+          var allowed = ["steam", "light", "midnight", "synthwave", "forest"];
+          if (allowed.indexOf(t) === -1) t = "steam";
+          document.documentElement.setAttribute("data-theme", t);
+          if (t !== "light") document.documentElement.classList.add("dark");
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "steam");
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
