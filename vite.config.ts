@@ -6,7 +6,7 @@ import path from "node:path";
 // Repository base path. Configurable via VITE_BASE_PATH env var
 // (e.g. set in the GitHub Actions workflow or .env.local).
 // Defaults to the current repo name.
-const base = process.env.VITE_BASE_PATH ?? "/nebula-shift-dev/";
+const base = process.env.VITE_BASE_PATH ?? "/GAMEDEV_PORTFOLIO/";
 
 export default defineConfig({
   base,
