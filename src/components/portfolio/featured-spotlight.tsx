@@ -115,9 +115,8 @@ export function FeaturedSpotlight() {
                   ref={videoRef}
                   src={asset(mediaVideo)}
                   poster={mediaPoster ? asset(mediaPoster) : undefined}
-                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
-                    isPlaying ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${isPlaying ? "opacity-100" : "opacity-0"
+                    }`}
                   playsInline
                   muted={isMuted}
                   preload="metadata"
@@ -131,9 +130,8 @@ export function FeaturedSpotlight() {
                       <img
                         src={asset(mediaPoster)}
                         alt={project.title}
-                        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
-                          shouldShowHoverMedia ? "opacity-0" : "opacity-100"
-                        }`}
+                        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${shouldShowHoverMedia ? "opacity-0" : "opacity-100"
+                          }`}
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).style.display = "none";
                         }}
@@ -146,17 +144,15 @@ export function FeaturedSpotlight() {
                         muted
                         loop
                         playsInline
-                        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 pointer-events-none ${
-                          shouldShowHoverMedia ? "opacity-100" : "opacity-0"
-                        }`}
+                        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 pointer-events-none ${shouldShowHoverMedia ? "opacity-100" : "opacity-0"
+                          }`}
                       />
                     ) : mediaGif ? (
                       <img
                         src={asset(mediaGif)}
                         alt={`${project.title} preview`}
-                        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 pointer-events-none ${
-                          shouldShowHoverMedia ? "opacity-100" : "opacity-0"
-                        }`}
+                        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 pointer-events-none ${shouldShowHoverMedia ? "opacity-100" : "opacity-0"
+                          }`}
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).style.display = "none";
                         }}
@@ -197,9 +193,8 @@ export function FeaturedSpotlight() {
                 <button
                   type="button"
                   onClick={handleVideoToggle}
-                  className={`absolute inset-0 flex items-center justify-center bg-black/20 transition hover:bg-black/30 ${
-                    isPlaying ? "opacity-0" : "opacity-100"
-                  }`}
+                  className={`absolute inset-0 flex items-center justify-center bg-black/20 transition hover:bg-black/30 ${isPlaying ? "opacity-0" : "opacity-100"
+                    }`}
                   aria-label={isPlaying ? "Pause featured video" : "Play featured video"}
                 >
                   <div className="text-center">

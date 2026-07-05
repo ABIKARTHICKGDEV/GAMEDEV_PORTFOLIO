@@ -769,6 +769,105 @@ export const portfolio: PortfolioConfig = {
       ],
     },
     {
+      id: "angry-birds-slingshot",
+      title: "Angry Birds Slingshot Mechanics",
+      engine: "Unity",
+      category: "Gameplay Mechanics",
+      difficulty: "Intermediate",
+      engineVersion: "Unity 6",
+      description:
+        "A recreation of the core Angry Birds slingshot mechanic built in Unity 6 using C#. This project demonstrates mouse drag controls, constrained aiming, dynamic LineRenderer slingshot bands, physics-based launching, and Cinemachine camera follow while focusing on gameplay programming fundamentals.",
+      purpose:
+        "Recreate the core slingshot mechanics of Angry Birds to demonstrate screen space to world space conversion, constrained dragging, dynamic bands rendering, and physics-based launches in Unity.",
+      usedIn: "Slingshot-style games, physics-based projectile launchers, and trajectory aiming systems.",
+      benefit:
+        "Provides a highly polished, tactile, and intuitive dragging feel with dynamic visual cues that map directly to physics-based results.",
+      experience:
+        "Delivers fluid drag feedback, circular boundary constraints, responsive rubber bands stretching, realistic trajectory launching, and smooth Cinemachine camera follow.",
+      media: {
+        preview: "GamePlay_Machnics/Angry_bird_Slingshot/cover.png",
+        hoverVideo: "GamePlay_Machnics/Angry_bird_Slingshot/gameplay.mp4",
+        video: "GamePlay_Machnics/Angry_bird_Slingshot/gameplay.mp4",
+      },
+      links: {
+        github: "https://github.com/ABIKARTHICKGDEV/Angry-Birds-Slingshot-Mechanics-Unity-6-",
+      },
+      articleUrl:
+        "https://www.linkedin.com/posts/abikarthick_unity-unity3d-unity6-ugcPost-7479609923450871808-xddi/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U",
+      features: [
+        "🖱️ Mouse Drag & Drop Controls",
+        "🎯 Follow Mouse System",
+        "📏 Limited Drag Distance",
+        "⭕ Circular Drag Boundary",
+        "🕸️ Dynamic Slingshot Bands",
+        "🚀 Physics-Based Launch",
+        "🎥 Cinemachine Camera Follow",
+        "🧱 Modular Gameplay Architecture",
+      ],
+      technologies: [
+        "Unity 6",
+        "C#",
+        "Unity Input System",
+        "Rigidbody2D",
+        "LineRenderer",
+        "Cinemachine",
+      ],
+      learnings: [
+        "Screen Space to World Space conversion",
+        "Unity Input System",
+        "Vector Mathematics",
+        "Rigidbody2D Physics",
+        "ForceMode2D.Impulse",
+        "Dynamic LineRenderer updates",
+        "Camera tracking using Cinemachine",
+        "Modular gameplay scripting",
+      ],
+      gallery: {
+        gameplay: [
+          "GamePlay_Machnics/Angry_bird_Slingshot/cover.png",
+          "GamePlay_Machnics/Angry_bird_Slingshot/gameplayscreenshot1.png",
+          "GamePlay_Machnics/Angry_bird_Slingshot/gameplayscreenshot2.png",
+        ],
+        development: [
+          "GamePlay_Machnics/Angry_bird_Slingshot/code_01.png",
+          "GamePlay_Machnics/Angry_bird_Slingshot/code_02.png",
+          "GamePlay_Machnics/Angry_bird_Slingshot/code_03.png",
+          "GamePlay_Machnics/Angry_bird_Slingshot/code_04.png",
+        ],
+      },
+      flow:
+        "Detect mouse down on projectile\nConvert mouse screen position to world coordinates\nClamp drag position within circular boundary\nUpdate dynamic LineRenderer slingshot bands\nApply physical impulse on mouse release\nTrigger Cinemachine camera target follow",
+      architecture:
+        "InputSystem → SlingshotHandler → TrajectoryPredictor → SlingshotBandsRenderer → Rigidbody2DProjectile → CinemachineVirtualCamera",
+      breakdown: [
+        "Screen Space to World Space conversion",
+        "Vector distance clamping (Circular Boundary)",
+        "Dynamic LineRenderer vertex updates",
+        "Rigidbody2D impulse launching",
+        "Cinemachine camera target tracking",
+      ],
+      steps: [
+        "Create slingshot center anchor and drag boundary circle",
+        "Implement mouse drag interactions on projectile collider",
+        "Clamp drag vector length to maximum allowed distance",
+        "Set LineRenderer positions dynamically based on projectile coordinates",
+        "On drag release, disable LineRenderer and add ForceMode2D.Impulse",
+        "Configure Cinemachine follow target to trace the launched projectile",
+      ],
+      challenges: [
+        {
+          challenge: "Constraining projectile drag to a perfect circle around the anchor",
+          solution:
+            "Calculated the offset vector from anchor to mouse position, checked magnitude, and normalized/scaled it by the maximum distance if it exceeded the limit.",
+        },
+        {
+          challenge: "Keeping slingshot bands attached correctly as the projectile moves",
+          solution:
+            "Created left/right band anchor points and updated the LineRenderer start/end points to point dynamically between those anchors and the projectile's transform position in real time.",
+        },
+      ],
+    },
+    {
       id: "enemy-ai",
       title: "Enemy AI",
       engine: "Unity",
