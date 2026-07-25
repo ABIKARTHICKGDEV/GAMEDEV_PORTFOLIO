@@ -22,6 +22,12 @@ export interface Project {
   tags: string[]; // drives filter bar: unity, unreal, 2d, 3d, game-jam, in-development
   tech: string[];
   features: string[];
+  /** Per-feature cards shown in Gameplay Overview: title + individual description */
+  gameplay?: { title: string; description: string }[];
+  /** System cards shown in Gameplay Systems section */
+  systems?: { title: string; description: string }[];
+  /** Module names listed in Technical Architecture section */
+  architectureModules?: string[];
   projectImpact: { problem: string; solution: string };
   metrics: ProjectMetrics;
   challenges: { challenge: string; solution: string }[];
@@ -364,6 +370,125 @@ export const portfolio: PortfolioConfig = {
         "Game Over Screen",
         "WebGL Build",
         "Responsive UI",
+      ],
+      gameplay: [
+        {
+          title: "Three-Lane Movement",
+          description:
+            "Switch between three lanes to avoid vehicles and collect energy charges while maintaining continuous forward movement.",
+        },
+        {
+          title: "Endless Runner Gameplay",
+          description:
+            "Run endlessly through a cyberpunk-inspired city, surviving as long as possible while your score increases over time.",
+        },
+        {
+          title: "Portrait Mobile UI",
+          description:
+            "Designed specifically for portrait orientation, providing a clean and intuitive interface across desktop and mobile browsers.",
+        },
+        {
+          title: "Mobile Swipe Controls",
+          description:
+            "Supports swipe gestures for lane switching and jumping, making gameplay comfortable on touch devices.",
+        },
+        {
+          title: "Keyboard Controls",
+          description:
+            "Desktop players can control the character using keyboard input for smooth and responsive movement.",
+        },
+        {
+          title: "Variable Jump Height",
+          description:
+            "Jump height changes depending on how long the jump button is held, allowing precise obstacle navigation.",
+        },
+        {
+          title: "Coyote Time",
+          description:
+            "Provides a short grace period after leaving the ground, making jumps feel more forgiving and responsive.",
+        },
+        {
+          title: "Jump Buffer",
+          description:
+            "Stores jump input just before landing so the player automatically jumps on touchdown.",
+        },
+        {
+          title: "Charge Collection System",
+          description:
+            "Collect energy charges scattered throughout the level to increase your collected charge count and overall score.",
+        },
+        {
+          title: "Score System",
+          description:
+            "Distance travelled and collected charges contribute to the player's final score.",
+        },
+        {
+          title: "Enemy Chase Mechanic",
+          description:
+            "An enemy continuously pursues the player, increasing tension and encouraging constant movement.",
+        },
+        {
+          title: "Pause Menu",
+          description:
+            "Pause gameplay at any time with options to resume, restart, or quit the game.",
+        },
+        {
+          title: "Game Over Screen",
+          description:
+            "Displays the player's final score and collected charges with quick options to retry the run.",
+        },
+        {
+          title: "WebGL Build",
+          description:
+            "Optimized for browser play and deployed using Unity WebGL with responsive portrait support.",
+        },
+        {
+          title: "Responsive UI",
+          description:
+            "All interface elements automatically scale for different portrait resolutions while maintaining consistent layout.",
+        },
+      ],
+      systems: [
+        {
+          title: "Player Movement",
+          description: "Lane switching, jumping, coyote time, and jump buffering systems.",
+        },
+        {
+          title: "Input System",
+          description: "Keyboard controls for desktop and swipe controls for mobile devices.",
+        },
+        {
+          title: "Gameplay Manager",
+          description:
+            "Handles score calculation, charge collection, pause state, and game over flow.",
+        },
+        {
+          title: "UI System",
+          description:
+            "Responsive portrait UI including HUD, menus, score display, and pause/game over screens.",
+        },
+        {
+          title: "Audio Manager",
+          description: "Controls background music, sound effects, and mute/unmute functionality.",
+        },
+        {
+          title: "Environment System",
+          description:
+            "Procedural obstacle spawning and endless road progression to create continuous gameplay.",
+        },
+      ],
+      architectureModules: [
+        "Player Controller",
+        "Swipe Input",
+        "Lane Movement",
+        "Jump System",
+        "Game Manager",
+        "UI Manager",
+        "Audio Manager",
+        "Charge Collection",
+        "Enemy Controller",
+        "Environment Spawner",
+        "Scene Manager",
       ],
       projectImpact: {
         problem:
