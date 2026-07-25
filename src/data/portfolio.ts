@@ -22,8 +22,8 @@ export interface Project {
   tags: string[]; // drives filter bar: unity, unreal, 2d, 3d, game-jam, in-development
   tech: string[];
   features: string[];
-  /** Per-feature cards shown in Gameplay Overview: title + individual description */
-  gameplay?: { title: string; description: string }[];
+  /** Per-feature cards shown in Gameplay Overview: title + individual description + optional thumbnail */
+  gameplay?: { title: string; description: string; image?: string }[];
   /** System cards shown in Gameplay Systems section */
   systems?: { title: string; description: string }[];
   /** Module names listed in Technical Architecture section */
@@ -376,76 +376,91 @@ export const portfolio: PortfolioConfig = {
           title: "Three-Lane Movement",
           description:
             "Switch between three lanes to avoid vehicles and collect energy charges while maintaining continuous forward movement.",
+          image: "Project_Assets/Chargecollector/Gameplay.png",
         },
         {
           title: "Endless Runner Gameplay",
           description:
             "Run endlessly through a cyberpunk-inspired city, surviving as long as possible while your score increases over time.",
+          image: "Project_Assets/Chargecollector/Screenshot_1.png",
         },
         {
           title: "Portrait Mobile UI",
           description:
             "Designed specifically for portrait orientation, providing a clean and intuitive interface across desktop and mobile browsers.",
+          image: "Project_Assets/Chargecollector/Mainmenu.png",
         },
         {
           title: "Mobile Swipe Controls",
           description:
             "Supports swipe gestures for lane switching and jumping, making gameplay comfortable on touch devices.",
+          image: "Project_Assets/Chargecollector/Mainmenu.png",
         },
         {
           title: "Keyboard Controls",
           description:
             "Desktop players can control the character using keyboard input for smooth and responsive movement.",
+          image: "Project_Assets/Chargecollector/Screenshot_2.png",
         },
         {
           title: "Variable Jump Height",
           description:
             "Jump height changes depending on how long the jump button is held, allowing precise obstacle navigation.",
+          image: "Project_Assets/Chargecollector/Gameplay.png",
         },
         {
           title: "Coyote Time",
           description:
             "Provides a short grace period after leaving the ground, making jumps feel more forgiving and responsive.",
+          image: "Project_Assets/Chargecollector/Screenshot_1.png",
         },
         {
           title: "Jump Buffer",
           description:
             "Stores jump input just before landing so the player automatically jumps on touchdown.",
+          image: "Project_Assets/Chargecollector/Screenshot_2.png",
         },
         {
           title: "Charge Collection System",
           description:
             "Collect energy charges scattered throughout the level to increase your collected charge count and overall score.",
+          image: "Project_Assets/Chargecollector/Screenshot_1.png",
         },
         {
           title: "Score System",
           description:
             "Distance travelled and collected charges contribute to the player's final score.",
+          image: "Project_Assets/Chargecollector/Gameover.png",
         },
         {
           title: "Enemy Chase Mechanic",
           description:
             "An enemy continuously pursues the player, increasing tension and encouraging constant movement.",
+          image: "Project_Assets/Chargecollector/Gameplay.png",
         },
         {
           title: "Pause Menu",
           description:
             "Pause gameplay at any time with options to resume, restart, or quit the game.",
+          image: "Project_Assets/Chargecollector/Screenshot_2.png",
         },
         {
           title: "Game Over Screen",
           description:
             "Displays the player's final score and collected charges with quick options to retry the run.",
+          image: "Project_Assets/Chargecollector/Gameover.png",
         },
         {
           title: "WebGL Build",
           description:
             "Optimized for browser play and deployed using Unity WebGL with responsive portrait support.",
+          image: "Project_Assets/Chargecollector/Screenshot_1.png",
         },
         {
           title: "Responsive UI",
           description:
             "All interface elements automatically scale for different portrait resolutions while maintaining consistent layout.",
+          image: "Project_Assets/Chargecollector/Mainmenu.png",
         },
       ],
       systems: [
