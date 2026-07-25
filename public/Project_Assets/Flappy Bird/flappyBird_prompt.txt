@@ -1,0 +1,217 @@
+# ============================================
+# UNIVERSAL PORTFOLIO METADATA
+# ============================================
+
+type: project
+
+# ---------- BASIC ----------
+
+id: flappy-bird
+
+title: Flappy Bird Clone
+
+subtitle: The Beginning of My Game Development Journey
+
+description: >
+  A recreation of the classic Flappy Bird built in Unity. Originally created on
+  26 May 2024 as my very first game development project, this game introduced me
+  to Unity, C#, 2D physics, collision detection, procedural obstacle spawning,
+  UI management, and gameplay programming. Although simple, it represents the
+  foundation of my journey as a game developer.
+
+featured: false
+
+status: Completed
+
+category: Game Development
+
+genre: Arcade
+
+engine: Unity
+
+engineVersion: Unity 2022 LTS
+
+language: C#
+
+platform:
+  - Windows
+  - WebGL
+
+developmentTime: 1 Week
+
+teamSize: 1
+
+difficulty:
+
+parentProject:
+
+# ---------- LINKS ----------
+
+play: https://abikarthick.itch.io/flappy-bird
+
+github: https://github.com/ABIKARTHICKGDEV/Unity-FlappyBird-Clone
+
+linkedin: null
+
+documentation: null
+
+# ---------- MEDIA ----------
+
+thumbnail: /Project_Assets/Flappy Bird/icon.png
+
+banner: /Project_Assets/Flappy Bird/Logo.png
+
+heroImage: /Project_Assets/Flappy Bird/GamePlay_1.png
+
+trailer: /Project_Assets/Flappy Bird/GamePlay_hover.mp4
+
+gallery:
+  - /Project_Assets/Flappy Bird/GamePlay_1.png
+  - /Project_Assets/Flappy Bird/GamePlay_2.png
+  - /Project_Assets/Flappy Bird/GamePlay_3.png
+  - /Project_Assets/Flappy Bird/GamePlay_4.png
+
+# ---------- TAGS ----------
+
+tags:
+  - Unity
+  - C#
+  - 2D
+  - Arcade
+  - Flappy Bird
+  - Physics
+  - Beginner Project
+  - Portfolio
+  - Indie Game
+  - WebGL
+
+# ---------- FEATURES ----------
+
+features:
+  - Classic Flappy Bird gameplay
+  - Physics-based bird movement
+  - Infinite procedural pipe generation
+  - Score tracking system
+  - Collision detection
+  - Game Over state
+  - Restart functionality
+  - Infinite scrolling background
+  - Responsive UI
+  - WebGL playable build
+
+# ---------- GAMEPLAY ----------
+
+gameplay:
+  - Tap or press Space to flap upward.
+  - Fly through randomly generated pipe gaps.
+  - Avoid colliding with pipes and the ground.
+  - Earn one point for every successful pipe passed.
+  - Achieve the highest score before crashing.
+
+# ---------- SYSTEMS ----------
+
+systems:
+  - Bird Controller
+  - Pipe Generator
+  - Pipe Movement
+  - Background Scrolling
+  - Score Manager
+  - Collision Detection
+  - UI Manager
+  - Scene Transition
+
+# ---------- TECH STACK ----------
+
+techStack:
+  - Unity
+  - C#
+  - Unity Physics 2D
+  - TextMesh Pro
+
+# ---------- CHALLENGES ----------
+
+challenges:
+  - Learning Unity for the first time
+  - Understanding Rigidbody2D physics
+  - Creating endless obstacle generation
+  - Implementing collision-based game states
+  - Building a complete gameplay loop
+  - Organizing scripts into reusable components
+
+# ---------- LESSONS ----------
+
+lessonsLearned:
+  - Unity project structure
+  - Component-based architecture
+  - Rigidbody2D mechanics
+  - Procedural spawning
+  - UI implementation
+  - Scene management
+  - Gameplay programming fundamentals
+  - Writing maintainable C# scripts
+
+# ---------- SOURCE CODE ----------
+
+sourceCode:
+  available: true
+  includes:
+    - C# Scripts
+    - Gameplay Screenshots
+    - Gameplay Preview Video
+  excludes:
+    - Complete Unity Project
+    - Third-party Assets
+
+# ---------- METRICS ----------
+
+metrics:
+  scripts: 8
+  scenes: 2
+  platform: WebGL
+  repository: Public
+  created: 26 May 2024
+  lastUpdated: July 2026
+
+# ---------- TIMELINE ----------
+
+timeline:
+  started: 26 May 2024
+  completed: 26 May 2024
+  revisited: July 2026
+
+# ---------- ARCHITECTURE ----------
+
+architectureImage: null
+
+architectureModules:
+  - Bird Controller
+  - Pipe Generator
+  - Pipe Movement
+  - Background
+  - Score Detection
+  - UI Manager
+  - Scene Transition
+
+# ---------- CTA ----------
+
+cta:
+  title: Play My First Unity Game
+  description: >
+    This project marks the beginning of my game development journey.
+    Play it in your browser or explore the source code on GitHub to see
+    how my first Unity project was built.
+  primary:
+    text: Play Now
+    url: https://abikarthick.itch.io/flappy-bird
+  secondary:
+    text: View Source Code
+    url: https://github.com/ABIKARTHICKGDEV/Unity-FlappyBird-Clone
+# ---------- MILESTONE ----------
+
+milestone:
+  badge: "🐣 First Unity Project"
+  created: "26 May 2024"
+  description: >
+    This project marks the beginning of my game development journey.
+    It was the first game I ever built in Unity and represents the
+    foundation of everything I learned as a game developer.

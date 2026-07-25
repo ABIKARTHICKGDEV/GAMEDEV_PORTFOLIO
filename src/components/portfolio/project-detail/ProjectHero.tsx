@@ -139,14 +139,16 @@ export default function ProjectHero({ project }: { project: any }) {
               </a>
             ) : null}
 
-            <a
-              href={project.links?.linkedin ?? "#"}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-ghost-steam inline-flex items-center gap-2 px-4 py-2"
-            >
-              <Linkedin className="h-4 w-4" /> LinkedIn
-            </a>
+            {project.links?.linkedin ? (
+              <a
+                href={project.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost-steam inline-flex items-center gap-2 px-4 py-2"
+              >
+                <Linkedin className="h-4 w-4" /> LinkedIn
+              </a>
+            ) : null}
 
             <div className="ml-auto flex gap-3 text-sm">
               <div className="rounded-sm bg-[#32353D]/40 px-3 py-2">

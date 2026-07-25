@@ -42,7 +42,7 @@ export interface Project {
     itch?: string;
     itchEmbedUrl?: string;
     github?: string;
-    linkedin: string;
+    linkedin: string | null;
     details?: string;
   };
   media?: ProjectMedia;
@@ -676,19 +676,118 @@ export const portfolio: PortfolioConfig = {
       title: "Flappy Bird Clone",
       category: "2D Arcade",
       description:
-        "A faithful Flappy Bird clone in Unity — pipe spawning, scoring, and game-over flow. Built to study tight arcade loops.",
+        "A recreation of the classic Flappy Bird built in Unity. Originally created on 26 May 2024 as my very first game development project, this game introduced me to Unity, C#, 2D physics, collision detection, procedural obstacle spawning, UI management, and gameplay programming. Although simple, it represents the foundation of my journey as a game developer.",
       tags: ["unity", "2d"],
-      tech: ["Unity", "C#", "Git"],
-      features: ["Procedural pipe spawning", "Score tracking & high score", "Restart flow"],
+      tech: ["Unity 2022 LTS", "C#", "Unity Physics 2D", "TextMesh Pro"],
+      features: [
+        "Classic Flappy Bird gameplay",
+        "Physics-based bird movement",
+        "Infinite procedural pipe generation",
+        "Score tracking system",
+        "Collision detection",
+        "Game Over state",
+        "Restart functionality",
+        "Infinite scrolling background",
+        "Responsive UI",
+        "WebGL playable build",
+      ],
+      gameplay: [
+        {
+          title: "Physics-Based Bird Movement",
+          description:
+            "The bird is controlled entirely through Unity's Rigidbody2D. Each tap or Space press applies an upward impulse force, while gravity pulls the bird downward continuously — recreating the tight, responsive feel of the original Flappy Bird.",
+          image: "Project_Assets/Flappy Bird/GamePlay_1.png",
+        },
+        {
+          title: "Infinite Procedural Pipe Generation",
+          description:
+            "Pipes are spawned procedurally at randomised vertical positions and destroyed once off-screen. A dedicated Pipe Generator script controls spawn timing and horizontal gap distance to maintain consistent difficulty throughout the run.",
+          image: "Project_Assets/Flappy Bird/GamePlay_2.png",
+        },
+        {
+          title: "Score Tracking System",
+          description:
+            "A Score Manager awards one point every time the bird successfully passes through a pipe gap. The current score is updated in real time via TextMesh Pro and displayed on the Game Over screen at the end of each run.",
+          image: "Project_Assets/Flappy Bird/GamePlay_3.png",
+        },
+        {
+          title: "Collision Detection & Game Over State",
+          description:
+            "OnCollisionEnter2D handles all collision events — hitting a pipe or the ground immediately triggers the Game Over state, stops gameplay, and presents the player with their final score and a restart option.",
+          image: "Project_Assets/Flappy Bird/GamePlay_4.png",
+        },
+        {
+          title: "Infinite Scrolling Background",
+          description:
+            "The background scrolls continuously at a fixed speed, giving the illusion of infinite forward movement. The scrolling is driven by a lightweight script that offsets the sprite renderer's tiling texture every frame.",
+          image: "Project_Assets/Flappy Bird/GamePlay_1.png",
+        },
+        {
+          title: "Restart & Scene Transition",
+          description:
+            "On Game Over, a restart button reloads the active scene using Unity's Scene Manager, resetting all game state cleanly. This gave me my first hands-on experience with scene lifecycle management in Unity.",
+          image: "Project_Assets/Flappy Bird/GamePlay_2.png",
+        },
+        {
+          title: "WebGL Playable Build",
+          description:
+            "The game is deployed as a WebGL build on itch.io, making it playable directly in the browser without any installation. The build was optimised for fast load times and smooth performance in a web context.",
+          image: "Project_Assets/Flappy Bird/GamePlay_3.png",
+        },
+      ],
+      systems: [
+        {
+          title: "Bird Controller",
+          description: "Handles Rigidbody2D input, applies jump impulse on tap/Space, and clamps rotation to reflect velocity direction.",
+        },
+        {
+          title: "Pipe Generator",
+          description: "Spawns pipe pairs at timed intervals with randomised vertical offsets and destroys them once they leave the viewport.",
+        },
+        {
+          title: "Pipe Movement",
+          description: "Moves all active pipes leftward at a constant speed, creating the illusion of forward flight.",
+        },
+        {
+          title: "Background Scrolling",
+          description: "Offsets the background texture continuously to simulate an infinitely scrolling environment.",
+        },
+        {
+          title: "Score Manager",
+          description: "Detects when the bird passes a pipe trigger zone, increments the score, and updates the TextMesh Pro HUD in real time.",
+        },
+        {
+          title: "Collision Detection",
+          description: "Uses OnCollisionEnter2D and OnTriggerEnter2D events to detect pipe hits, ground contact, and score zone passes.",
+        },
+        {
+          title: "UI Manager",
+          description: "Manages HUD visibility, Game Over screen display, final score presentation, and button interactions.",
+        },
+        {
+          title: "Scene Transition",
+          description: "Handles scene reload on restart using Unity's SceneManager, resetting all gameplay state cleanly.",
+        },
+      ],
+      architectureModules: [
+        "Bird Controller",
+        "Pipe Generator",
+        "Pipe Movement",
+        "Background",
+        "Score Detection",
+        "UI Manager",
+        "Scene Transition",
+      ],
       projectImpact: {
-        problem: "Recreate Flappy Bird's tight one-button feel.",
+        problem:
+          "Build a complete, functional arcade game from scratch as a first Unity project — covering physics, procedural spawning, collision detection, scoring, and UI flow.",
         solution:
-          "Calibrated jump impulse + pipe spacing so the difficulty curve matches the original.",
+          "Implemented all core Flappy Bird systems using Unity 2022 LTS and C#: a Rigidbody2D bird controller, procedural pipe spawning, an infinite scrolling background, a score manager, collision-driven game states, and a WebGL-ready build deployed on itch.io.",
       },
       metrics: {
         type: "2D Arcade",
-        platform: "PC / WebGL",
-        engine: "Unity",
+        platform: "Windows / WebGL",
+        engine: "Unity 2022 LTS",
         language: "C#",
         teamSize: "Solo",
         devTime: "1 Week",
@@ -696,17 +795,62 @@ export const portfolio: PortfolioConfig = {
       },
       challenges: [
         {
-          challenge: "Pipe spacing felt inconsistent at higher speeds.",
-          solution: "Time-based spawner with fixed horizontal gap calculation.",
+          challenge: "Learning Unity for the first time with no prior experience.",
+          solution:
+            "Studied Unity's documentation and tutorials, then applied each concept directly — starting with GameObjects, components, and the Inspector before moving to scripts and physics.",
+        },
+        {
+          challenge: "Understanding Rigidbody2D physics for jump feel.",
+          solution:
+            "Experimented with different gravity scales and impulse values until the jump arc felt tight and responsive, matching the original Flappy Bird rhythm.",
+        },
+        {
+          challenge: "Creating endless obstacle generation without performance issues.",
+          solution:
+            "Implemented a timed spawner that instantiates pipe pairs off-screen and destroys them after they leave the viewport, keeping the scene clean at all times.",
+        },
+        {
+          challenge: "Implementing collision-based game state transitions.",
+          solution:
+            "Used OnCollisionEnter2D and OnTriggerEnter2D to detect hits and score events, then called the UI Manager to switch states and show the Game Over screen cleanly.",
+        },
+        {
+          challenge: "Building a complete gameplay loop as a first project.",
+          solution:
+            "Broke the project into isolated scripts — bird, pipes, background, score, and UI — keeping each responsibility separate and manageable for a beginner.",
         },
       ],
-      learnings: ["Gamefeel Tuning", "Scoring Systems", "Scene Flow"],
-      gallery: { gameplay: [], development: [], editor: [] },
-     links: {
-    itch: "https://abikarthick.itch.io/bros-jump",
-    github: "https://github.com/ABIKARTHICKGDEV/Bros-Jump-Unity",
-    linkedin: "https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7477652910747774976-o44n/"
-  },  
+      learnings: [
+        "Unity Project Structure",
+        "Component-Based Architecture",
+        "Rigidbody2D Mechanics",
+        "Procedural Spawning",
+        "UI Implementation",
+        "Scene Management",
+        "Gameplay Programming Fundamentals",
+        "Writing Maintainable C# Scripts",
+      ],
+      gallery: {
+        gameplay: [
+          "Project_Assets/Flappy Bird/GamePlay_1.png",
+          "Project_Assets/Flappy Bird/GamePlay_2.png",
+          "Project_Assets/Flappy Bird/GamePlay_3.png",
+          "Project_Assets/Flappy Bird/GamePlay_4.png",
+        ],
+        development: [],
+        editor: [],
+      },
+      links: {
+        itch: "https://abikarthick.itch.io/flappy-bird",
+        github: "https://github.com/ABIKARTHICKGDEV/Unity-FlappyBird-Clone",
+        linkedin: null,
+      },
+      media: {
+        banner: "Project_Assets/Flappy Bird/Logo.png",
+        screenshot: "Project_Assets/Flappy Bird/GamePlay_1.png",
+        hoverVideo: "Project_Assets/Flappy Bird/GamePlay_hover.mp4",
+        video: "Project_Assets/Flappy Bird/GamePlay.mp4",
+      },
     },
     {
       id: "pong",

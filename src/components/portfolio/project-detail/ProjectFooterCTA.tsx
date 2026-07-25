@@ -15,9 +15,11 @@ export default function ProjectFooterCTA({ project }: { project: any }) {
               <Play className="h-4 w-4" /> Play
             </a>
           ) : null}
-          <a href={project.links?.linkedin} target="_blank" rel="noreferrer" className="btn-ghost-steam inline-flex items-center gap-2 px-4 py-2">
-            <Linkedin className="h-4 w-4" /> LinkedIn
-          </a>
+          {project.links?.linkedin ? (
+            <a href={project.links.linkedin} target="_blank" rel="noreferrer" className="btn-ghost-steam inline-flex items-center gap-2 px-4 py-2">
+              <Linkedin className="h-4 w-4" /> LinkedIn
+            </a>
+          ) : null}
         </div>
       </div>
     </section>
