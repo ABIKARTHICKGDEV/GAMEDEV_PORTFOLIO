@@ -259,6 +259,51 @@ export const portfolio: PortfolioConfig = {
     "CrazyGames SDK Integration"
   ],
 
+  gameplay: [
+    {
+      title: "Two Unique Playable Characters",
+      description:
+        "Control two distinct characters with different movement abilities. Players must combine their unique mechanics to solve puzzles, unlock paths, and complete each level through teamwork.",
+      image: "Project_Assets/Bro's_Jump/cover.png",
+    },
+    {
+      title: "Responsive Movement Controller",
+      description:
+        "Built a smooth and responsive custom movement system featuring precise jumping, wall interactions, collision handling, and polished controls for an enjoyable platforming experience.",
+      image: "Project_Assets/Bro's_Jump/screenshot1.png",
+    },
+    {
+      title: "Puzzle-Focused Level Progression",
+      description:
+        "Designed handcrafted levels that gradually introduce new mechanics and require players to think strategically, encouraging experimentation and cooperative problem-solving.",
+      image: "Project_Assets/Bro's_Jump/screenshot2.png",
+    },
+    {
+      title: "Physics-Based Interactions",
+      description:
+        "Implemented Unity's 2D physics system using Rigidbody2D, colliders, and Physics Materials to create natural movement, interactive objects, and engaging environmental puzzles.",
+      image: "Project_Assets/Bro's_Jump/screenshot1.png",
+    },
+    {
+      title: "Checkpoint & Respawn System",
+      description:
+        "Created a checkpoint system that saves player progress and respawns both characters at the latest activated checkpoint, reducing frustration while maintaining gameplay flow.",
+      image: "Project_Assets/Bro's_Jump/screenshot2.png",
+    },
+    {
+      title: "Optimized WebGL Build",
+      description:
+        "Optimized assets, project settings, and performance for WebGL deployment, ensuring smooth gameplay and fast loading directly in desktop and mobile web browsers.",
+      image: "Project_Assets/Bro's_Jump/cover.png",
+    },
+    {
+      title: "CrazyGames SDK Integration",
+      description:
+        "Integrated the CrazyGames SDK to support platform features such as game initialization, browser compatibility, and deployment readiness for online publishing.",
+      image: "Project_Assets/Bro's_Jump/screenshot1.png",
+    },
+  ],
+
   projectImpact: {
     problem:
       "Design a cooperative puzzle platformer where players solve challenges using different character abilities.",
