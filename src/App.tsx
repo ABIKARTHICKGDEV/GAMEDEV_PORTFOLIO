@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const MechanicDetail = lazy(() => import("./pages/MechanicDetail"));
+const Resume = lazy(() => import("./pages/Resume"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 function PageFallback() {
@@ -19,6 +20,7 @@ export default function App() {
     <Suspense fallback={<PageFallback />}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/projects/:id" element={<ProjectDetail />} />
         <Route path="/mechanics/:id" element={<MechanicDetail />} />
         <Route path="/404" element={<NotFound />} />

@@ -166,12 +166,12 @@ export const portfolio: PortfolioConfig = {
     location: "Tamil Nadu, India",
     availability: "Open to Internship & Entry-Level Opportunities",
   },
-  resume: "/resume-gameplay.pdf",
+  resume: "Resumes/Abikarthick_resume_unity.pdf",
   resumeVariants: {
-    unity: "/resume-unity.pdf",
-    unreal: "/resume-unreal.pdf",
-    gameplay: "/resume-gameplay.pdf",
-    software: "/resume-software.pdf",
+    unity: "Resumes/Abikarthick_resume_unity.pdf",
+    unreal: "Resumes/Abikarthick_resume_unreal.pdf",
+    gameplay: "Resumes/Abikarthick_resume_unity.pdf",
+    software: "Resumes/Abikarthick_resume_unreal.pdf",
   },
   hero: {
     defaultHeadline: "Gameplay Programmer",
@@ -334,54 +334,113 @@ export const portfolio: PortfolioConfig = {
       id: "charge-collector",
       title: "Charge Collector",
       category: "3D Endless Runner",
-      // featured: true,
       description:
-        "A fast-paced 3D endless runner created for SCORE SPACE JAM #33. Dodge obstacles, collect charges, and rack up a high score as difficulty ramps.",
-      
+        "Charge Collector is a 3D endless runner developed in Unity 6 for my first Game Jam, ScoreSpace Jam #33 (2025). Players dodge traffic, collect energy charges, and survive as long as possible using three-lane movement, responsive jumping, and mobile swipe controls. The project was later revisited and polished with improved gameplay systems, UI, and WebGL support as part of my professional game development portfolio.",
+
       tags: ["unity", "3d", "game-jam"],
-      tech: ["Unity", "C#", "Git", "Blender"],
+      tech: [
+        "Unity 6.3 LTS",
+        "C#",
+        "Universal Render Pipeline (URP)",
+        "Unity Input System",
+        "Unity UI",
+        "Animator",
+        "Rigidbody Physics",
+        "WebGL",
+      ],
       features: [
-        "Procedural obstacle spawning",
-        "Score-based difficulty scaling",
-        "Object-pooled obstacles & collectibles",
-        "Juicy SFX + camera shake",
+        "Three-Lane Movement",
+        "Endless Runner Gameplay",
+        "Portrait Mobile UI",
+        "Mobile Swipe Controls",
+        "Keyboard Controls",
+        "Variable Jump Height",
+        "Coyote Time",
+        "Jump Buffer",
+        "Charge Collection System",
+        "Score System",
+        "Enemy Chase Mechanic",
+        "Pause Menu",
+        "Game Over Screen",
+        "WebGL Build",
+        "Responsive UI",
       ],
       projectImpact: {
-        problem: "Create an endless runner with increasing difficulty in 72 hours.",
+        problem:
+          "Build a complete and polished 3D endless runner during a 72-hour game jam, supporting both keyboard and mobile swipe controls with responsive gameplay feel.",
         solution:
-          "Implemented procedural obstacle spawning and score-based progression with pooled GameObjects.",
+          "Designed modular gameplay systems including a lane-switching controller, variable jump with coyote time & jump buffering, a charge collection system, enemy chase AI, and a full UI flow — all deployed as a WebGL build playable in portrait orientation on itch.io.",
       },
       metrics: {
-        type: "3D Endless Runner",
-        platform: "PC / WebGL",
-        engine: "Unity",
+        type: "Game Jam Project",
+        platform: "WebGL / Mobile Browser",
+        engine: "Unity 6",
         language: "C#",
         teamSize: "Solo",
-        devTime: "72 Hours",
+        devTime: "3 Days (Jam) + Polish",
         status: "Completed",
       },
       challenges: [
         {
-          challenge: "Infinite obstacle generation without GC spikes.",
-          solution: "Object pooling system with pre-warmed obstacle pools.",
+          challenge: "Designing a polished portrait UI for WebGL.",
+          solution:
+            "Used Unity's Canvas Scaler with reference resolution and tested across portrait viewports to keep the HUD consistent on different screen sizes.",
         },
         {
-          challenge: "Keeping difficulty fair as speed scales..",
-          solution: "Score-driven spawner weights & cooldown windows.",
+          challenge: "Supporting both keyboard and mobile swipe controls in the same build.",
+          solution:
+            "Implemented a dual-input system — Unity's Input System for keyboard and a custom SwipeDetector script for touch — both feeding into the same LaneController.",
+        },
+        {
+          challenge: "Fine-tuning jump responsiveness with coyote time and jump buffering.",
+          solution:
+            "Added a coyote time window so players can jump shortly after walking off a ledge, and a jump buffer so queued inputs register correctly for a snappy, forgiving feel.",
+        },
+        {
+          challenge: "Optimizing assets for browser performance.",
+          solution:
+            "Compressed textures, reduced polygon counts, and configured WebGL build settings for fast load times suitable for itch.io embedding.",
+        },
+        {
+          challenge: "Configuring itch.io portrait embedding correctly.",
+          solution:
+            "Set custom iframe dimensions in the itch.io project page to match the portrait WebGL canvas, ensuring the game fits the embed frame without scroll or distortion.",
         },
       ],
       learnings: [
-        "Object Pooling",
-        "State Machines",
-        "Physics Systems",
-        "UI Architecture",
-        "Git Workflow",
+        "Game Jam Development",
+        "Rapid Prototyping",
+        "WebGL Deployment",
+        "Responsive UI Design",
+        "Mobile Touch Input",
+        "Gameplay Feel & Responsiveness",
+        "Project Organization",
+        "GitHub Documentation",
+        "Browser Build Optimization",
       ],
-      gallery: { gameplay: [], development: [], editor: [] },
+      gallery: {
+        gameplay: [
+          "Project_Assets/Chargecollector/Gameplay.mp4",
+          "Project_Assets/Chargecollector/Mainmenu.png",
+          "Project_Assets/Chargecollector/Gameplay.png",
+          "Project_Assets/Chargecollector/Gameover.png",
+          "Project_Assets/Chargecollector/Screenshot_1.png",
+          "Project_Assets/Chargecollector/Screenshot_2.png",
+        ],
+        development: [],
+        editor: [],
+      },
       links: {
-        itch: "https://ABIKARTHICKGDEV.itch.io/charge-collector",
-        github: "https://github.com/ABIKARTHICKGDEV",
-        linkedin: "ABC",
+        itch: "https://abikarthick.itch.io/charge-collector",
+        github: "https://github.com/ABIKARTHICKGDEV/Charge-collector",
+        linkedin:
+          "https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7486828784998883330-lSx_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U",
+      },
+      media: {
+        banner: "Project_Assets/Chargecollector/Banner.png",
+        screenshot: "Project_Assets/Chargecollector/Gameplay.png",
+        hoverVideo: "Project_Assets/Chargecollector/Gameplay_hover_vid.mp4",
+        video: "Project_Assets/Chargecollector/Gameplay.mp4",
       },
     },
     {

@@ -1,0 +1,224 @@
+# ============================================
+# UNIVERSAL PORTFOLIO METADATA
+# ============================================
+
+type: project
+
+# ---------- BASIC ----------
+
+id: charge-collector
+
+title: Charge Collector
+
+subtitle: 3D Endless Runner | Unity 6 | ScoreSpace Jam #33 (2025)
+
+description: >
+  Charge Collector is a 3D endless runner developed in Unity 6 for my first
+  Game Jam, ScoreSpace Jam #33 (2025). Players dodge traffic, collect energy
+  charges, and survive as long as possible using three-lane movement,
+  responsive jumping, and mobile swipe controls. The project was later
+  revisited and polished with improved gameplay systems, UI, and WebGL support
+  as part of my professional game development portfolio.
+
+featured: false
+
+status: Completed
+
+category: Game
+
+genre: Endless Runner
+
+engine: Unity
+
+engineVersion: Unity 6.3 LTS (6000.3.15f1)
+
+language: C#
+
+platform:
+  - WebGL
+  - Windows Editor
+  - Mobile Browser
+
+developmentTime: 3 Days (Game Jam) + Portfolio Polish
+
+teamSize: Solo Developer
+
+difficulty:
+
+parentProject:
+
+# ---------- LINKS ----------
+
+play: https://abikarthick.itch.io/charge-collector
+
+github: https://github.com/ABIKARTHICKGDEV/Charge-collector
+
+linkedin: https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7486828784998883330-lSx_/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U
+
+documentation:
+
+# ---------- MEDIA ----------
+
+thumbnail: /Project_Assets/Chargecollector/Mainmenu.png
+
+banner: /Project_Assets/Chargecollector/Banner.png
+
+heroImage: /Project_Assets/Chargecollector/Gameplay.png
+
+trailer: /Project_Assets/Chargecollector/Gameplay.mov
+
+gallery:
+  - /Project_Assets/Chargecollector/Mainmenu.png
+  - /Project_Assets/Chargecollector/Gameplay.png
+  - /Project_Assets/Chargecollector/Gameover.png
+  - /Project_Assets/Chargecollector/Screenshot_1.png
+  - /Project_Assets/Chargecollector/Screenshot_2.png
+
+# ---------- TAGS ----------
+
+tags:
+  - Unity
+  - Unity 6
+  - C#
+  - WebGL
+  - Endless Runner
+  - Game Jam
+  - ScoreSpace Jam
+  - Mobile Controls
+  - Swipe Controls
+  - Portrait Game
+  - Solo Developer
+  - Indie Game
+
+# ---------- FEATURES ----------
+
+features:
+  - Three-Lane Movement
+  - Endless Runner Gameplay
+  - Portrait Mobile UI
+  - Mobile Swipe Controls
+  - Keyboard Controls
+  - Variable Jump Height
+  - Coyote Time
+  - Jump Buffer
+  - Charge Collection System
+  - Score System
+  - Enemy Chase Mechanic
+  - Pause Menu
+  - Game Over Screen
+  - WebGL Build
+  - Responsive UI
+
+# ---------- GAMEPLAY ----------
+
+gameplay:
+  - Run endlessly while avoiding obstacles.
+  - Switch between three lanes.
+  - Collect energy charges to increase score.
+  - Jump over obstacles using responsive controls.
+  - Survive as long as possible while being chased.
+  - Compete for the highest score.
+
+# ---------- SYSTEMS ----------
+
+systems:
+  - Character Controller
+  - Lane Switching System
+  - Swipe Input System
+  - Keyboard Input System
+  - Variable Jump System
+  - Coyote Time
+  - Jump Buffer
+  - Score Manager
+  - Charge Collection
+  - Enemy AI Chase
+  - UI Management
+  - Audio Manager
+  - Scene Management
+
+# ---------- TECH STACK ----------
+
+techStack:
+  - Unity 6.3 LTS
+  - C#
+  - Universal Render Pipeline (URP)
+  - Unity Input System
+  - Unity UI
+  - Animator
+  - Rigidbody Physics
+  - WebGL
+
+# ---------- CHALLENGES ----------
+
+challenges:
+  - Designing a polished portrait UI for WebGL.
+  - Supporting both keyboard and mobile swipe controls.
+  - Fine-tuning jump responsiveness with coyote time and jump buffering.
+  - Optimizing assets for browser performance.
+  - Maintaining consistent UI scaling across different portrait resolutions.
+  - Configuring itch.io portrait embedding correctly.
+
+# ---------- LESSONS ----------
+
+lessonsLearned:
+  - Game jam development and rapid prototyping.
+  - WebGL deployment workflow.
+  - Responsive UI design in Unity.
+  - Mobile touch input implementation.
+  - Gameplay feel and player responsiveness.
+  - Project organization and GitHub documentation.
+  - Optimizing Unity projects for browser deployment.
+
+# ---------- SOURCE CODE ----------
+
+sourceCode:
+  available: true
+  repository: https://github.com/ABIKARTHICKGDEV/Charge-collector
+
+# ---------- METRICS ----------
+
+metrics:
+  projectType: Game Jam Project
+  gameJam: ScoreSpace Jam #33
+  year: 2025
+  engine: Unity 6
+  buildPlatform: WebGL
+  perspective: Third Person
+  camera: Perspective
+  controlModes:
+    - Keyboard
+    - Swipe
+  orientation: Portrait
+  developer: Solo
+
+# ---------- TIMELINE ----------
+
+timeline:
+  - 2025: Developed during ScoreSpace Jam #33.
+  - 2026: Revisited and polished as a portfolio project.
+  - 2026: Published source code on GitHub.
+  - 2026: Released WebGL build on itch.io.
+
+# ---------- ARCHITECTURE ----------
+
+architectureImage:
+
+architectureModules:
+  - Game Manager
+  - Player Controller
+  - Swipe Input
+  - Lane Controller
+  - Jump System
+  - Enemy Controller
+  - Score Manager
+  - UI Manager
+  - Audio Manager
+  - Scene Loader
+
+# ---------- CTA ----------
+
+cta:
+  title: Play Charge Collector
+  description: Experience my first Game Jam project, now polished as part of my professional game development portfolio.
+  playButton: Play on itch.io
+  sourceButton: View Source Code

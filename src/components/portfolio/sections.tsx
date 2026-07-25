@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Icons from "lucide-react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
@@ -711,14 +712,13 @@ export function Contact() {
                 Resume
               </span>
             </div>
-            <a
-              href={asset(portfolio.resume)}
-              download
+            <Link
+              to="/resume"
               className="inline-flex w-full items-center justify-between rounded-sm border border-white/8 bg-[#32353D]/40 px-3 py-2.5 text-xs font-semibold uppercase tracking-wider hover:border-primary/30 hover:bg-[#32353D]/70"
             >
               Download Resume
               <Icons.Download className="h-3.5 w-3.5 text-primary" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

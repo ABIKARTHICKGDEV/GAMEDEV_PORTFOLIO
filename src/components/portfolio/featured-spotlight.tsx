@@ -14,7 +14,7 @@ export function FeaturedSpotlight() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isVideoActive, setIsVideoActive] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   const mediaVideo = project.media?.video;
   const mediaHoverVideo = project.media?.hoverVideo;
@@ -30,56 +30,28 @@ export function FeaturedSpotlight() {
     setIsPlaying(false);
     setIsHovering(false);
     setIsVideoActive(false);
-    setIsMuted(false);
+    setIsMuted(true);
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
-      videoRef.current.muted = false;
+      videoRef.current.muted = true;
+      videoRef.current.volume = 1.0;
     }
   }, [project.id]);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = isMuted;
+      videoRef.current.volume = 1.0;
     }
   }, [isMuted, project.id]);
 
-  const handleVideoToggle = async () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (!isVideoActive) {
-      setIsVideoActive(true);
-      setIsPlaying(true);
-      try {
-        await video.play();
-      } catch (error) {
-        console.warn("Video play prevented by browser", error);
-        setIsPlaying(false);
-      }
-      return;
-    }
-
-    if (isPlaying) {
-      video.pause();
-      setIsPlaying(false);
-      return;
-    }
-
-    if (video.ended) {
-      video.currentTime = 0;
-    }
-
-    try {
-      await video.play();
-      setIsPlaying(true);
-    } catch (error) {
-      console.warn("Video play prevented by browser", error);
-    }
+  const handleVideoToggle = () => {
+    setIsVideoActive(true);
+    setIsPlaying(true);
   };
 
-  const shouldShowPreviewMedia = !isVideoActive || !isPlaying;
-  const shouldShowHoverMedia = isHovering && !isPlaying && Boolean(mediaHoverVideo || mediaGif);
+  const shouldShowHoverMedia = isHovering && !isVideoActive && Boolean(mediaHoverVideo || mediaGif);
 
   return (
     <section id="featured" className="mx-auto mt-6 max-w-7xl scroll-mt-20 px-4 sm:px-6">
@@ -103,7 +75,7 @@ export function FeaturedSpotlight() {
         <div className="grid lg:grid-cols-[7fr_3fr]">
           {/* Cover */}
           <div
-            className="group relative aspect-[16/9] overflow-hidden border-b border-white/5 lg:border-b-0 lg:border-r"
+            className="group relative aspect-[16/9] overflow-hidden border-b border-white/5 lg:border-b-0 lg:border-r bg-black"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
@@ -111,20 +83,20 @@ export function FeaturedSpotlight() {
             <div className="absolute inset-0 grid-bg opacity-40" />
             {mediaVideo ? (
               <>
-                <video
-                  ref={videoRef}
-                  src={asset(mediaVideo)}
-                  poster={mediaPoster ? asset(mediaPoster) : undefined}
-                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${isPlaying ? "opacity-100" : "opacity-0"
-                    }`}
-                  playsInline
-                  muted={isMuted}
-                  preload="metadata"
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
-                  onEnded={() => setIsPlaying(false)}
-                />
-                {shouldShowPreviewMedia ? (
+                {isVideoActive ? (
+                  <video
+                    ref={videoRef}
+                    src={asset(mediaVideo)}
+                    controls
+                    autoPlay
+                    playsInline
+                    preload="auto"
+                    className="relative z-10 h-full w-full object-cover"
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                  />
+                ) : (
                   <>
                     {mediaPoster ? (
                       <img
@@ -158,8 +130,27 @@ export function FeaturedSpotlight() {
                         }}
                       />
                     ) : null}
+
+                    <button
+                      type="button"
+                      onClick={handleVideoToggle}
+                      className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition hover:bg-black/40 cursor-pointer"
+                      aria-label="Play featured video"
+                    >
+                      <div className="text-center">
+                        <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-primary/20 backdrop-blur transition group-hover:scale-110 sm:h-20 sm:w-20">
+                          <Play className="h-6 w-6 text-primary sm:h-8 sm:w-8 ml-0.5" />
+                        </div>
+                        <div className="mt-3 font-display text-xl font-extrabold tracking-tight text-foreground/90 sm:mt-4 sm:text-3xl lg:text-4xl">
+                          {project.title}
+                        </div>
+                        <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:text-xs">
+                          {project.metrics.engine} · {project.metrics.platform}
+                        </div>
+                      </div>
+                    </button>
                   </>
-                ) : null}
+                )}
               </>
             ) : mediaPoster ? (
               <img
@@ -188,46 +179,8 @@ export function FeaturedSpotlight() {
                 </div>
               </div>
             )}
-            {mediaVideo ? (
-              <>
-                <button
-                  type="button"
-                  onClick={handleVideoToggle}
-                  className={`absolute inset-0 flex items-center justify-center bg-black/20 transition hover:bg-black/30 ${isPlaying ? "opacity-0" : "opacity-100"
-                    }`}
-                  aria-label={isPlaying ? "Pause featured video" : "Play featured video"}
-                >
-                  <div className="text-center">
-                    <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-primary/20 backdrop-blur transition group-hover:scale-110 sm:h-20 sm:w-20">
-                      {isPlaying ? (
-                        <Pause className="h-6 w-6 text-primary sm:h-8 sm:w-8" />
-                      ) : (
-                        <Play className="h-6 w-6 text-primary sm:h-8 sm:w-8" />
-                      )}
-                    </div>
-                    <div className="mt-3 font-display text-xl font-extrabold tracking-tight text-foreground/80 sm:mt-4 sm:text-3xl lg:text-4xl">
-                      {project.title}
-                    </div>
-                    <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:text-xs">
-                      {project.metrics.engine} · {project.metrics.platform}
-                    </div>
-                  </div>
-                </button>
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    setIsMuted((value) => !value);
-                  }}
-                  className="absolute bottom-3 right-3 z-10 grid h-9 w-9 place-items-center rounded-full border border-white/15 bg-black/60 text-foreground backdrop-blur transition hover:bg-black/80"
-                  aria-label={isMuted ? "Unmute featured video" : "Mute featured video"}
-                >
-                  {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-                </button>
-              </>
-            ) : null}
             {isGameJam ? (
-              <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-sm border border-amber-400/40 bg-amber-400/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-amber-200">
+              <div className="absolute left-4 top-4 z-20 inline-flex items-center gap-1.5 rounded-sm border border-amber-400/40 bg-amber-400/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-amber-200">
                 <Trophy className="h-3 w-3" /> Game Jam
               </div>
             ) : null}

@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { Play, Download, Github, ArrowRight, Gamepad2, Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { asset } from "@/lib/asset";
 import { RecentlyDeveloped } from "./sections";
 
 export function Hero() {
-  const resume = asset(portfolio.resume);
   const featured =
     portfolio.projects.find((p) => p.id === portfolio.featuredProjectId) ??
     portfolio.projects[0]!;
@@ -79,13 +79,12 @@ export function Hero() {
             >
               <Github className="h-4 w-4" /> GitHub
             </a>
-            <a
-              href={resume}
-              download
+            <Link
+              to="/resume"
               className="btn-ghost-steam inline-flex items-center gap-2 rounded-sm px-5 py-2.5 text-sm font-semibold uppercase tracking-wider"
             >
               <Download className="h-4 w-4" /> Download Resume
-            </a>
+            </Link>
           </div>
         </motion.div>
 

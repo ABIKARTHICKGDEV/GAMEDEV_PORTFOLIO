@@ -70,14 +70,13 @@ export function Nav() {
           >
             <Github className="h-4 w-4" />
           </a>
-          <a
-            href={resume}
-            download
+          <Link
+            to="/resume"
             className="btn-steam hidden items-center gap-2 rounded-sm px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider sm:inline-flex"
           >
             <Download className="h-3.5 w-3.5" />
             Download Resume
-          </a>
+          </Link>
           <button
             className="grid h-9 w-9 place-items-center rounded-sm border border-white/8 bg-white/5 text-foreground md:hidden"
             onClick={() => setOpen((v) => !v)}
@@ -107,13 +106,13 @@ export function Nav() {
                   {n.label}
                 </a>
               ))}
-              <a
-                href={resume}
-                download
+              <Link
+                to="/resume"
+                onClick={() => setOpen(false)}
                 className="btn-steam mt-2 inline-flex items-center justify-center gap-2 rounded-sm px-3 py-2.5 text-sm font-semibold uppercase tracking-wider"
               >
                 <Download className="h-4 w-4" /> Download Resume
-              </a>
+              </Link>
             </div>
           </motion.div>
         ) : null}

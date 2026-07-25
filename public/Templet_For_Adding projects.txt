@@ -1,0 +1,106 @@
+# ============================================
+# UNIVERSAL PORTFOLIO METADATA
+# type = project | mechanic
+# ============================================
+
+type:
+
+# ---------- BASIC ----------
+
+id:
+title:
+subtitle:
+description:
+
+featured: false
+
+status:
+
+category:
+
+genre:
+
+engine:
+
+engineVersion:
+
+language:
+
+platform:
+
+developmentTime:
+
+teamSize:
+
+difficulty:          # mechanic only
+
+parentProject:       # mechanic only
+
+# ---------- LINKS ----------
+
+play:
+github:
+linkedin:
+documentation:
+
+# ---------- MEDIA ----------
+
+thumbnail:
+
+banner:
+
+heroImage:
+
+trailer:
+
+gallery:
+
+# ---------- TAGS ----------
+
+tags:
+
+# ---------- FEATURES ----------
+
+features:
+
+# ---------- GAMEPLAY ----------
+
+gameplay:
+
+# ---------- SYSTEMS ----------
+
+systems:
+
+# ---------- TECH STACK ----------
+
+techStack:
+
+# ---------- CHALLENGES ----------
+
+challenges:
+
+# ---------- LESSONS ----------
+
+lessonsLearned:
+
+# ---------- SOURCE CODE ----------
+
+sourceCode:
+
+# ---------- METRICS ----------
+
+metrics:
+
+# ---------- TIMELINE ----------
+
+timeline:
+
+# ---------- ARCHITECTURE ----------
+
+architectureImage:
+
+architectureModules:
+
+# ---------- CTA ----------
+
+cta:
