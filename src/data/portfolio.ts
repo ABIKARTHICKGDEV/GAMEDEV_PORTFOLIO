@@ -1,4 +1,4 @@
-// ─────────────────────────────────────────────────────────────────────────────
+﻿// ─────────────────────────────────────────────────────────────────────────────
 // Single source of truth for the portfolio. One identity: Gameplay Programmer.
 // Add a project, resume variant, or a skill = single push.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -629,47 +629,195 @@ export const portfolio: PortfolioConfig = {
       },
     },
     {
-      id: "starstuff",
-      title: "StarStuff",
-      category: "3D Twin-Stick Shooter",
+      id: "pong",
+      title: "Pong Clone",
+      category: "Game Project",
       description:
-        "An original sci-fi twin-stick shooter built in Unreal Engine 5. Featuring spherical planet gameplay, enemy AI, weapon systems, and arcade-inspired combat.",
-      tags: ["Unreal", "3d", "in-development"],
-      tech: ["Unreal", "C++", "Blueprint", "Diversion"],
+        "A recreation of the classic Pong arcade game developed in Unity as one of my early game development projects. Originally created on 12 December 2024 and later reworked to improve the code structure, gameplay experience, and mobile support. The project features AI-controlled opponents, score management, audio systems, keyboard controls, and smooth drag controls for Android and mobile browsers.",
+      tags: ["unity", "2d"],
+      tech: [
+        "Unity 6",
+        "C#",
+        "Rigidbody2D",
+        "Unity Physics 2D",
+        "TextMeshPro",
+        "Unity Scene Management",
+      ],
       features: [
-        "Custom 2D physics interactions",
-        "Hand-crafted puzzle levels",
-        "Modular gameplay systems",
-        "Iterative playtesting loop",
+        "Classic Pong gameplay",
+        "Player vs AI",
+        "Ball physics",
+        "Collision detection",
+        "Score management",
+        "Win/Lose system",
+        "Background music",
+        "Sound effects",
+        "Keyboard controls",
+        "Android drag controls",
+        "Mobile browser support",
+      ],
+      gameplay: [
+        {
+          title: "Classic Pong Gameplay",
+          description:
+            "A faithful recreation of the original Pong experience — two paddles, one ball, and a race to the target score. Simple controls and immediate fun make it an ideal first project for learning core game loop design.",
+          image: "Project_Assets/Pongclone/Gameplay1.png",
+        },
+        {
+          title: "Player vs AI",
+          description:
+            "Compete against an AI-controlled opponent that tracks and reacts to the ball's position. The AI paddle logic provides a consistent challenge while remaining beatable, balancing difficulty for casual play.",
+          image: "Project_Assets/Pongclone/Gameplay2.png",
+        },
+        {
+          title: "Ball Physics",
+          description:
+            "The ball uses Unity's Rigidbody2D for physics-based movement and collision handling. Speed and angle are carefully tuned to keep gameplay fair, responsive, and engaging throughout each match.",
+          image: "Project_Assets/Pongclone/Gameplay1.png",
+        },
+        {
+          title: "Score Management & Win/Lose System",
+          description:
+            "A complete score tracking system awards points when the ball passes the opponent's side. The game monitors win and lose conditions, transitioning to an end screen when the target score is reached.",
+          image: "Project_Assets/Pongclone/WinMenu.png",
+        },
+        {
+          title: "Background Music & Sound Effects",
+          description:
+            "An audio manager handles background music and sound effects for ball hits, scoring events, and game state transitions — creating a more immersive and polished arcade atmosphere.",
+          image: "Project_Assets/Pongclone/Gameplay2.png",
+        },
+        {
+          title: "Keyboard Controls",
+          description:
+            "Desktop players control the paddle using the Up and Down Arrow keys, providing precise and responsive movement that feels natural for classic Pong gameplay.",
+          image: "Project_Assets/Pongclone/Gameplay1.png",
+        },
+        {
+          title: "Android Drag Controls",
+          description:
+            "A custom drag input system was built for Android and mobile browser players, allowing smooth paddle movement via touch and drag — making the game fully playable on touchscreen devices.",
+          image: "Project_Assets/Pongclone/Gameplay2.png",
+        },
+      ],
+      systems: [
+        {
+          title: "Ball Physics",
+          description:
+            "Handles Rigidbody2D-based ball movement, collision reflection, and speed management throughout gameplay.",
+        },
+        {
+          title: "Paddle Controller",
+          description:
+            "Controls player paddle movement using keyboard input with smooth, bounded vertical movement.",
+        },
+        {
+          title: "AI Paddle Logic",
+          description:
+            "Tracks ball position and moves the AI paddle to intercept, providing a consistent and responsive opponent.",
+        },
+        {
+          title: "Score Manager",
+          description:
+            "Tracks scores for both the player and AI, updates the HUD in real time, and evaluates win and lose conditions.",
+        },
+        {
+          title: "Scene Management",
+          description:
+            "Handles transitions between the main menu, gameplay, and win/lose screens using Unity Scene Manager.",
+        },
+        {
+          title: "Audio Manager",
+          description:
+            "Controls background music, ball hit sounds, score sounds, and game state audio transitions.",
+        },
+        {
+          title: "Drag Input System",
+          description:
+            "A custom touch input system enabling smooth paddle dragging for Android and mobile browser players.",
+        },
+        {
+          title: "Game State Management",
+          description:
+            "Manages game flow including start, pause, win, and lose states, ensuring clean transitions across the entire gameplay loop.",
+        },
+      ],
+      architectureModules: [
+        "Player Controller",
+        "Drag Input",
+        "Ball Controller",
+        "AI Controller",
+        "Score Manager",
+        "Music Manager",
+        "Level Manager",
       ],
       projectImpact: {
-        problem: "Design an original puzzle platformer that teaches mechanics without text.",
+        problem:
+          "Recreate the classic Pong arcade game with AI opponent support, cross-platform input (keyboard and touch drag), and a complete game loop including scoring, audio, and win/lose states.",
         solution:
-          "Built modular physics primitives the player learns through play, with level layout driving discovery.",
+          "Built all core Pong systems in Unity 6 using C#: a Rigidbody2D ball controller, AI paddle logic, a score manager with win/lose conditions, an audio manager for music and SFX, keyboard controls for desktop, and a custom drag input system for Android and mobile browser play.",
       },
       metrics: {
-        type: "2D Puzzle Platformer",
-        platform: "PC",
-        engine: "Unity",
+        type: "Game Project",
+        platform: "Windows / WebGL / Android",
+        engine: "Unity 6",
         language: "C#",
         teamSize: "Solo",
-        devTime: "Ongoing",
-        status: "In Development",
+        devTime: "Personal Learning Project",
+        status: "Completed",
       },
       challenges: [
         {
-          challenge: "Reliable 2D physics behaviour across framerates.",
-          solution: "FixedUpdate-driven physics step with interpolated visuals.",
+          challenge: "Implementing responsive AI paddle movement.",
+          solution:
+            "Tracked the ball's Y position each frame and moved the AI paddle towards it at a controlled speed, providing a challenge without making it unbeatable.",
+        },
+        {
+          challenge: "Balancing ball speed and gameplay difficulty.",
+          solution:
+            "Tuned Rigidbody2D velocity and added speed scaling after each successful hit to progressively increase challenge while keeping gameplay fair.",
+        },
+        {
+          challenge: "Creating smooth drag controls for Android and WebGL mobile browsers.",
+          solution:
+            "Built a custom DragInput script using Unity's touch input API that maps touch delta to paddle movement, providing an intuitive and responsive drag experience on both Android and mobile browsers.",
+        },
+        {
+          challenge: "Refactoring an older Unity project using improved coding practices.",
+          solution:
+            "Reorganised scripts into clearly separated responsibilities — Ball, DragInput, LevelManager, MusicManager, PlayerController, and ScoreManager — improving readability, maintainability, and reusability.",
         },
       ],
-      learnings: ["Custom Physics", "Level Design", "Iterative Playtesting"],
-      gallery: { gameplay: [], development: [], editor: [] },
-     links: {
-    itch: "https://abikarthick.itch.io/bros-jump",
-    github: "https://github.com/ABIKARTHICKGDEV/Bros-Jump-Unity",
-    linkedin: "https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7477652910747774976-o44n/"
-  },  
-      
+      learnings: [
+        "Unity 2D Gameplay Programming",
+        "Collision and Physics Handling",
+        "Game State Management",
+        "Mobile Touch Input Implementation",
+        "Code Refactoring and Project Organization",
+        "Building Projects for Multiple Platforms",
+      ],
+      gallery: {
+        gameplay: [
+          "Project_Assets/Pongclone/Gameplay.mp4",
+          "Project_Assets/Pongclone/Gameplay1.png",
+          "Project_Assets/Pongclone/Gameplay2.png",
+          "Project_Assets/Pongclone/WinMenu.png",
+        ],
+        development: [],
+        editor: [],
+      },
+      links: {
+        itch: "https://abikarthick.itch.io/pong",
+        github: "https://github.com/ABIKARTHICKGDEV/Pong-clone",
+        linkedin:
+          "https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7487058370764513280-D8Ie/",
+      },
+      media: {
+        banner: "Project_Assets/Pongclone/Logo.png",
+        screenshot: "Project_Assets/Pongclone/Gameplay1.png",
+        hoverVideo: "Project_Assets/Pongclone/Gameplay_hover.mp4",
+        video: "Project_Assets/Pongclone/Gameplay.mp4",
+      },
     },
     {
       id: "flappy-bird",
@@ -853,40 +1001,47 @@ export const portfolio: PortfolioConfig = {
       },
     },
     {
-      id: "pong",
-      title: "Pong Clone",
-      category: "2D Arcade",
+      id: "starstuff",
+      title: "StarStuff",
+      category: "3D Twin-Stick Shooter",
       description:
-        "Classic Pong built from scratch in Unity. Local 2-player, paddle physics, and a clean scoring HUD.",
-      tags: ["unity", "2d"],
-      tech: ["Unity", "C#", "Git"],
-      features: ["Two-player local", "Angle-based paddle reflection", "Score HUD"],
+        "An original sci-fi twin-stick shooter built in Unreal Engine 5. Featuring spherical planet gameplay, enemy AI, weapon systems, and arcade-inspired combat.",
+      tags: ["Unreal", "3d", "in-development"],
+      tech: ["Unreal", "C++", "Blueprint", "Diversion"],
+      features: [
+        "Custom 2D physics interactions",
+        "Hand-crafted puzzle levels",
+        "Modular gameplay systems",
+        "Iterative playtesting loop",
+      ],
       projectImpact: {
-        problem: "Build a foundational arcade game from zero.",
-        solution: "Implemented paddle reflection math and a deterministic ball reset routine.",
+        problem: "Design an original puzzle platformer that teaches mechanics without text.",
+        solution:
+          "Built modular physics primitives the player learns through play, with level layout driving discovery.",
       },
       metrics: {
-        type: "2D Arcade",
+        type: "2D Puzzle Platformer",
         platform: "PC",
         engine: "Unity",
         language: "C#",
         teamSize: "Solo",
-        devTime: "3 Days",
-        status: "Completed",
+        devTime: "Ongoing",
+        status: "In Development",
       },
       challenges: [
         {
-          challenge: "Ball reflection felt random.",
-          solution: "Mapped contact point to outgoing angle for predictable bounces.",
+          challenge: "Reliable 2D physics behaviour across framerates.",
+          solution: "FixedUpdate-driven physics step with interpolated visuals.",
         },
       ],
-      learnings: ["2D Physics", "Input Handling", "UI Basics"],
+      learnings: ["Custom Physics", "Level Design", "Iterative Playtesting"],
       gallery: { gameplay: [], development: [], editor: [] },
      links: {
     itch: "https://abikarthick.itch.io/bros-jump",
     github: "https://github.com/ABIKARTHICKGDEV/Bros-Jump-Unity",
     linkedin: "https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7477652910747774976-o44n/"
   },  
+      
     },
   ],
   showcase: {
@@ -1016,54 +1171,6 @@ export const portfolio: PortfolioConfig = {
   },
   // ── Gameplay mechanics carousel (data-driven; add more by appending) ───────
   gameplayMechanics: [
-    // TODO: add media (preview/gif/video) and links (github/demo) as systems ship.
-    {
-      id: "wall-jump",
-      title: "Wall Jump",
-      engine: "Unity",
-      category: "Movement System",
-      difficulty: "Intermediate",
-      engineVersion: "Unity 2024.3",
-      description:
-        "Kinematic wall detection with coyote-time and variable jump impulse for responsive platforming.",
-      purpose:
-        "Create a polished wall-jump mechanic that rewards timing and retains player momentum while supporting level traversal.",
-      usedIn: "Platforming traversal, vertical navigation, and momentum-based combat arenas.",
-      benefit:
-        "A reliable wall jump adds depth to movement and enables more expressive level design without compromising control.",
-      experience:
-        "Feels responsive and consistent, with a satisfying jump arc and immediate recovery after impact.",
-      media: { preview: "/bg/mechanics.jpg" },
-      flow:
-        "Detect wall contact\nEnable wall jump window\nApply jump impulse\nTransition to air state\nBlend animation and camera",
-      architecture: "PlayerController → WallDetection → JumpImpulse → StateMachine → Camera",
-      breakdown: [
-        "Wall contact and surface normals",
-        "Coyote time and input buffering",
-        "Variable jump height and impulse",
-        "Momentum conservation and air control",
-        "Animation blending and feedback",
-      ],
-      steps: [
-        "Confirm valid wall surface",
-        "Open a wall-jump buffer window",
-        "Apply targeted impulse away from surface",
-        "Switch to airborne movement state",
-        "Allow directional control in mid-air",
-      ],
-      challenges: [
-        {
-          challenge: "Preventing repeated wall jump exploitation",
-          solution:
-            "Added a cooldown and grounded reset condition so players can’t chain wall jumps indefinitely."
-        },
-        {
-          challenge: "Maintaining animation feel during rapid input",
-          solution:
-            "Used a blend tree with dynamic root motion and matched velocity to keep transitions smooth."
-        },
-      ],
-    },
     {
       id: "third-person-shooting",
       title: "🎮 Third-Person Shooting System",
@@ -1256,6 +1363,39 @@ export const portfolio: PortfolioConfig = {
       ],
     },
     {
+      id: "basketball-shooter",
+      title: "Basketball Shooter",
+      engine: "Unity",
+      category: "Gameplay Mechanics",
+      difficulty: "Intermediate",
+      engineVersion: "Unity 6",
+      description:
+        "A basketball shooting mechanic built in Unity 6 — content coming soon.",
+      purpose: "Explore arc-based projectile trajectories and basket detection in Unity.",
+      usedIn: "Sports games, trajectory aiming systems, and physics-based gameplay prototypes.",
+      benefit: "Demonstrates parabolic trajectory calculation, physics-based ball launching, and rim collision detection.",
+      experience: "Satisfying arc launch with precise basket entry detection — content details coming soon.",
+      media: {},
+      features: [
+        "Arc-based ball trajectory",
+        "Physics-based launching",
+        "Basket detection",
+        "Score system",
+      ],
+      technologies: [
+        "Unity 6",
+        "C#",
+        "Rigidbody Physics",
+        "Physics Raycasting",
+      ],
+      learnings: [
+        "Parabolic Trajectory Math",
+        "Physics-Based Launching",
+        "Collision Detection",
+        "Score Systems",
+      ],
+    },
+    {
       id: "enemy-ai",
       title: "Enemy AI",
       engine: "Unity",
@@ -1284,13 +1424,6 @@ export const portfolio: PortfolioConfig = {
       media: {},
     },
     {
-      id: "object-pooling",
-      title: "Object Pooling",
-      engine: "Unity",
-      description: "Pre-warmed pools to eliminate GC spikes during heavy spawn loads.",
-      media: {},
-    },
-    {
       id: "save-system",
       title: "Save System",
       engine: "Unity",
@@ -1305,31 +1438,10 @@ export const portfolio: PortfolioConfig = {
       media: {},
     },
     {
-      id: "turn-based-grid",
-      title: "Turn Based Grid System",
-      engine: "Unity",
-      description: "Tile grid with pathfinding, action points, and turn queue.",
-      media: {},
-    },
-    {
       id: "procedural-generation",
       title: "Procedural Generation",
       engine: "Unity",
       description: "Seeded room/level generation with constraint-based layout rules.",
-      media: {},
-    },
-    {
-      id: "input-system",
-      title: "Input System",
-      engine: "Unity",
-      description: "Unity Input System bindings with rebinding UI and device switching.",
-      media: {},
-    },
-    {
-      id: "animation-controller",
-      title: "Animation Controller",
-      engine: "Unreal Engine",
-      description: "Animation Blueprint with state machines, blend spaces, and root motion.",
       media: {},
     },
   ],

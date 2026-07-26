@@ -1,0 +1,213 @@
+# ============================================
+# UNIVERSAL PORTFOLIO METADATA
+# type = project | mechanic
+# ============================================
+
+type: project
+
+# ---------- BASIC ----------
+
+id: pong-clone
+
+title: Pong Clone
+
+subtitle: Classic Arcade Game Recreation
+
+description: >
+  A recreation of the classic Pong arcade game developed in Unity as one of my
+  early game development projects. Originally created on 12 December 2024 and
+  later reworked to improve the code structure, gameplay experience, and mobile
+  support. The project features AI-controlled opponents, score management,
+  audio systems, keyboard controls, and smooth drag controls for Android and
+  mobile browsers.
+
+featured: false
+
+status: Completed
+
+category: Game Project
+
+genre: Arcade • Sports • Casual
+
+engine: Unity
+
+engineVersion: Unity 6
+
+language: C#
+
+platform:
+  - Windows
+  - WebGL
+  - Android
+
+developmentTime: Personal Learning Project
+
+teamSize: Solo
+
+difficulty:
+
+parentProject:
+
+# ---------- LINKS ----------
+
+play: https://abikarthick.itch.io/pong
+
+github: https://github.com/ABIKARTHICKGDEV/Pong-clone
+
+linkedin: https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7487058370764513280-D8Ie/
+
+documentation:
+
+# ---------- MEDIA ----------
+
+thumbnail: Project_Assets/Pongclone/Logo.png
+
+banner: Project_Assets/Pongclone/Gameplay1.png
+
+heroImage: Project_Assets/Pongclone/Gameplay1.png
+
+videos:
+  trailer: Project_Assets/Pongclone/Gameplay.mp4
+  hoverPreview: Project_Assets/Pongclone/Gameplay_hover.mp4
+
+gallery:
+  images:
+    - Project_Assets/Pongclone/Gameplay1.png
+    - Project_Assets/Pongclone/Gameplay2.png
+    - Project_Assets/Pongclone/WinMenu.png# ---------- TAGS ----------
+
+tags:
+  - Unity
+  - Unity6
+  - C#
+  - Pong
+  - Arcade
+  - 2D
+  - Physics
+  - AI
+  - Mobile
+  - WebGL
+  - Portfolio
+  - Solo Project
+
+# ---------- FEATURES ----------
+
+features:
+  - Classic Pong gameplay
+  - Player vs AI
+  - Ball physics
+  - Collision detection
+  - Score management
+  - Win/Lose system
+  - Background music
+  - Sound effects
+  - Keyboard controls
+  - Android drag controls
+  - Mobile browser support
+
+# ---------- GAMEPLAY ----------
+
+gameplay:
+  objective: Defeat the AI opponent by reaching the target score before the computer.
+  controls:
+    Desktop:
+      - Up Arrow
+      - Down Arrow
+    Mobile:
+      - Drag Up
+      - Drag Down
+  winCondition: Reach the target score before the AI.
+  loseCondition: AI reaches the target score first.
+
+# ---------- SYSTEMS ----------
+
+systems:
+  - Ball Physics
+  - Paddle Controller
+  - AI Paddle Logic
+  - Score Manager
+  - Scene Management
+  - Audio Manager
+  - Drag Input System
+  - Game State Management
+
+# ---------- TECH STACK ----------
+
+techStack:
+  - Unity 6
+  - C#
+  - Rigidbody2D
+  - Unity Physics 2D
+  - TextMeshPro
+  - Unity Scene Management
+
+# ---------- CHALLENGES ----------
+
+challenges:
+  - Implementing responsive AI paddle movement.
+  - Balancing ball speed and gameplay difficulty.
+  - Creating smooth drag controls for Android and WebGL mobile browsers.
+  - Refactoring an older Unity project using improved coding practices.
+
+# ---------- LESSONS ----------
+
+lessonsLearned:
+  - Unity 2D gameplay programming.
+  - Collision and physics handling.
+  - Game state management.
+  - Mobile touch input implementation.
+  - Code refactoring and project organization.
+  - Building projects for multiple platforms.
+
+# ---------- SOURCE CODE ----------
+
+sourceCode:
+  scripts:
+    - Ball.cs
+    - DragInput.cs
+    - LevelManager.cs
+    - MusicManager.cs
+    - playercontroller1.cs
+    - ScoreManager.cs
+
+# ---------- METRICS ----------
+
+metrics:
+  created: 12 December 2024
+  reworked: July 2026
+  projectType: Learning Project
+  codeLanguage: C#
+  repository: Public
+
+# ---------- TIMELINE ----------
+
+timeline:
+  - 12 Dec 2024 — Initial Pong Clone created.
+  - Jul 2026 — Project reworked.
+  - Jul 2026 — Added Android drag controls.
+  - Jul 2026 — Published to GitHub, LinkedIn, Portfolio and Itch.io.
+
+# ---------- ARCHITECTURE ----------
+
+architectureImage:
+
+architectureModules:
+  - Player Controller
+  - Drag Input
+  - Ball Controller
+  - AI Controller
+  - Score Manager
+  - Music Manager
+  - Level Manager
+
+# ---------- CTA ----------
+
+cta:
+  title: Play the Game
+  description: Try the game online or explore the source code to see how it was built.
+  primaryButton:
+    text: Play on Itch.io
+    url: https://abikarthick.itch.io/pong
+  secondaryButton:
+    text: View Source Code
+    url: https://github.com/ABIKARTHICKGDEV/Pong-clone

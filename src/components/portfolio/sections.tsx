@@ -22,8 +22,9 @@ const lucide = Icons as unknown as Record<string, LucideIcon>;
 
 export function RecentlyDeveloped() {
   const released = portfolio.projects.filter(
-    (p) => p.metrics.status === "Completed",
+    (p) => p.metrics.status === "Completed" || p.metrics.status === "Released",
   );
+  const hasMore = released.length > 3;
   return (
     <div className="rounded-sm border border-white/8 bg-[#2B2E35]/80 backdrop-blur-sm">
       <div className="flex items-center justify-between border-b border-white/8 px-4 py-3">
@@ -34,49 +35,60 @@ export function RecentlyDeveloped() {
           {released.length} titles
         </span>
       </div>
-      <div className="scroll-row max-h-[320px] overflow-y-auto px-2 py-2 sm:max-h-[460px]">
-        <ul className="flex flex-col gap-1.5">
-          {released.map((p) => (
-            <li key={p.id}>
-              <a
-                href="#library"
-                className="card-lift group flex items-center gap-3 rounded-sm border border-transparent bg-[#32353D]/30 p-2 hover:border-primary/30 hover:bg-[#32353D]/60"
-              >
-                <div className="relative h-12 w-20 shrink-0 overflow-hidden rounded-sm border border-white/8 bg-gradient-to-br from-[#32353D] via-[#2B2E35] to-[#1B1B1F]">
-                  <div className="absolute inset-0 grid-bg opacity-30" />
-                  {p.media?.banner ? (
-                    <img
-                      src={asset(p.media.banner)}
-                      alt={p.title}
-                      className="absolute inset-0 h-full w-full object-cover"
-                      onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).style.display =
-                          "none";
-                      }}
-                    />
-                  ) : (
-                    <div className="absolute inset-0 grid place-items-center">
-                      <Icons.Gamepad2 className="h-4 w-4 text-foreground/30" />
+      <div className="relative">
+        <div className="scroll-row overflow-y-auto px-2 py-2" style={{ maxHeight: "216px" }}>
+          <ul className="flex flex-col gap-1.5">
+            {released.map((p) => (
+              <li key={p.id}>
+                <a
+                  href="#library"
+                  className="card-lift group flex items-center gap-3 rounded-sm border border-transparent bg-[#32353D]/30 p-2 hover:border-primary/30 hover:bg-[#32353D]/60"
+                >
+                  <div className="relative h-12 w-20 shrink-0 overflow-hidden rounded-sm border border-white/8 bg-gradient-to-br from-[#32353D] via-[#2B2E35] to-[#1B1B1F]">
+                    <div className="absolute inset-0 grid-bg opacity-30" />
+                    {p.media?.banner ? (
+                      <img
+                        src={asset(p.media.banner)}
+                        alt={p.title}
+                        className="absolute inset-0 h-full w-full object-cover"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).style.display =
+                            "none";
+                        }}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 grid place-items-center">
+                        <Icons.Gamepad2 className="h-4 w-4 text-foreground/30" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="truncate font-display text-sm font-semibold text-foreground">
+                      {p.title}
                     </div>
-                  )}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="truncate font-display text-sm font-semibold text-foreground">
-                    {p.title}
+                    <div className="truncate text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {p.metrics.engine} · {p.category}
+                    </div>
                   </div>
-                  <div className="truncate text-[10px] uppercase tracking-widest text-muted-foreground">
-                    {p.metrics.engine} · {p.category}
-                  </div>
-                </div>
-                <Icons.ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:text-accent" />
-              </a>
-            </li>
-          ))}
-        </ul>
+                  <Icons.ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:text-accent" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {hasMore && (
+          <>
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#2B2E35] to-transparent" />
+            <div className="flex items-center justify-center gap-1 py-1.5 text-[9px] uppercase tracking-widest text-muted-foreground/50">
+              <Icons.ChevronsDown className="h-3 w-3" /> scroll for more
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
 }
+
 
 // ─── Development Toolkit (was: Skills) ──────────────────────────────────────
 
@@ -697,6 +709,12 @@ export function Contact() {
                 rel="noreferrer"
               >
                 <Icons.Github className="h-4 w-4 text-primary" /> GitHub
+              </a>
+              <a
+                className="flex items-center gap-2 hover:text-accent"
+                href="tel:+917598321448"
+              >
+                <Icons.Phone className="h-4 w-4 text-primary" /> +91 75983 21448
               </a>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Icons.MapPin className="h-4 w-4 text-primary" />{" "}
