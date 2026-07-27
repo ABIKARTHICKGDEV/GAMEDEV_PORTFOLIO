@@ -1,0 +1,341 @@
+# ============================================
+# UNIVERSAL PORTFOLIO METADATA
+# ============================================
+
+type: mechanic
+
+# ==========================================================
+# BASIC INFORMATION
+# ==========================================================
+
+id: basketball-shooting-mechanic
+
+slug: basketball-shooting-mechanic
+
+title: Basketball Shooting Mechanic
+
+subtitle: A simple Unity basketball shooting prototype featuring dribbling, aiming, parabolic trajectory, and physics-based ball interaction.
+
+description: >
+  A gameplay mechanic prototype built in Unity 6 demonstrating a complete basketball shooting workflow.
+  The mechanic includes player movement, automatic dribbling, hold-to-aim functionality, player rotation
+  toward the hoop, parabolic ball trajectory, physics-based release, and automatic ball collection/reset.
+
+shortDescription: >
+  Unity basketball shooting mechanic with dribbling, aiming, parabolic shooting, and physics.
+
+featured: false
+
+status: Completed
+
+visibility: public
+
+category: Mechanic
+
+genre: Sports
+
+created: 2026-07-02
+
+lastUpdated: 2026-07-27
+
+version: 1.0
+
+engine: Unity
+
+engineVersion: Unity 6
+
+language: C#
+
+platforms:
+  - Windows
+
+developmentTime: 1 Day
+
+teamSize: 1
+
+role: Solo Developer
+
+difficulty: Intermediate
+
+parentProject:
+
+# ==========================================================
+# LINKS
+# ==========================================================
+
+links:
+
+  play:
+
+  github: https://github.com/ABIKARTHICKGDEV/Basketball-Shooting-Mechanic-Unity
+
+  portfolio: https://abikarthickgdev.github.io/GAMEDEV_PORTFOLIO/
+
+  itch:
+
+  linkedin: https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7478459075438043137-Dyg6/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U
+
+  documentation:
+
+  youtube:
+
+  devlog:
+
+  download:
+
+# ==========================================================
+# MEDIA
+# ==========================================================
+
+media:
+
+  thumbnail: /GamePlay_Machnics/Basketball_shooter/Screenshot-1.png
+
+  cardImage: /GamePlay_Machnics/Basketball_shooter/Screenshot-1.png
+
+  banner: /GamePlay_Machnics/Basketball_shooter/Screenshot-1.png
+
+  heroImage: /GamePlay_Machnics/Basketball_shooter/Screenshot-1.png
+
+  icon:
+
+  videos:
+
+    trailer:
+
+    hoverPreview: /GamePlay_Machnics/Basketball_shooter/Basketball-hover.mp4
+
+    gameplay: /GamePlay_Machnics/Basketball_shooter/Machnics_play.mp4
+
+    teaser:
+
+  gallery:
+
+    - image: /GamePlay_Machnics/Basketball_shooter/Screenshot-1.png
+
+    - image: /GamePlay_Machnics/Basketball_shooter/Screenshot-2.png
+
+    - image: /GamePlay_Machnics/Basketball_shooter/Screenshot-3.png
+
+    - image: /GamePlay_Machnics/Basketball_shooter/Screenshot-4.png
+
+    - image: /GamePlay_Machnics/Basketball_shooter/Screenshot-5.png
+
+# ==========================================================
+# TAGS
+# ==========================================================
+
+tags:
+
+  - Unity
+  - Unity6
+  - Gameplay Mechanic
+  - Basketball
+  - Sports
+  - Prototype
+  - C#
+  - Physics
+  - Rigidbody
+  - Parabolic Trajectory
+  - Dribbling
+  - Shooting
+  - Portfolio
+
+# ==========================================================
+# FEATURES
+# ==========================================================
+
+features:
+
+  - Player movement
+  - Automatic ball dribbling
+  - Hold-to-aim mechanic
+  - Automatic player rotation
+  - Parabolic shooting trajectory
+  - Rigidbody physics after release
+  - Ball collection and reset
+  - Smooth gameplay prototype
+
+# ==========================================================
+# GAMEPLAY
+# ==========================================================
+
+gameplay:
+
+  objective: Shoot the basketball into the hoop using a smooth aiming and trajectory system.
+
+  controls:
+
+    keyboard: WASD / Arrow Keys + Hold Space to Aim + Release Space to Shoot
+
+    mouse:
+
+    gamepad:
+
+    mobile:
+
+  winCondition: Successfully shoot the basketball into the hoop.
+
+  loseCondition:
+
+# ==========================================================
+# SYSTEMS
+# ==========================================================
+
+systems:
+
+  - Player Controller
+  - Dribble System
+  - Aim System
+  - Trajectory System
+  - Physics System
+  - Ball Reset System
+
+# ==========================================================
+# TECH STACK
+# ==========================================================
+
+techStack:
+
+  engine: Unity 6
+
+  language: C#
+
+  physics: Unity Rigidbody Physics
+
+  ui:
+
+  networking:
+
+  ai:
+
+  audio:
+
+  rendering: Universal Render Pipeline (URP)
+
+# ==========================================================
+# SOURCE CODE
+# ==========================================================
+
+sourceCode:
+
+  repository: https://github.com/ABIKARTHICKGDEV/Basketball-Shooting-Mechanic-Unity
+
+  scripts:
+
+    - BasketballController.cs
+
+  totalScripts: 1
+
+# ==========================================================
+# CHALLENGES
+# ==========================================================
+
+challenges:
+
+  - Creating a smooth parabolic ball trajectory.
+  - Combining scripted movement with Unity physics.
+  - Managing transitions between dribbling, aiming, shooting, and reset states.
+  - Maintaining responsive gameplay controls.
+
+# ==========================================================
+# LESSONS LEARNED
+# ==========================================================
+
+lessonsLearned:
+
+  - Gameplay state management.
+  - Parabolic trajectory calculation.
+  - Rigidbody handoff after scripted movement.
+  - Player rotation toward dynamic targets.
+  - Better gameplay flow using modular C# architecture.
+
+# ==========================================================
+# METRICS
+# ==========================================================
+
+metrics:
+
+  created: 2026-07-02
+
+  completed: 2026-07-02
+
+  updated: 2026-07-27
+
+  commits:
+
+  scenes: 1
+
+  prefabs:
+
+  scripts: 1
+
+  codeLines:
+
+# ==========================================================
+# TIMELINE
+# ==========================================================
+
+timeline:
+
+  - Designed the prototype.
+  - Implemented player movement.
+  - Added dribble animation.
+  - Implemented aiming system.
+  - Created parabolic shooting trajectory.
+  - Integrated Unity physics after release.
+  - Added ball collection and reset.
+  - Recorded gameplay and published portfolio.
+
+# ==========================================================
+# ARCHITECTURE
+# ==========================================================
+
+architecture:
+
+  image:
+
+  modules:
+
+    - Player Controller
+    - Dribble Controller
+    - Aim Controller
+    - Shooting System
+    - Physics Handler
+    - Ball Reset System
+
+# ==========================================================
+# PORTFOLIO DISPLAY
+# ==========================================================
+
+display:
+
+  order:
+
+  showOnHome: true
+
+  showInFeatured: false
+
+  showTimeline: true
+
+# ==========================================================
+# CALL TO ACTION
+# ==========================================================
+
+cta:
+
+  title: Explore the Mechanic
+
+  description: Watch the gameplay, explore the source code, and view more Unity mechanics in my portfolio.
+
+  primary:
+
+    text: View Source Code
+
+    url: https://github.com/ABIKARTHICKGDEV/Basketball-Shooting-Mechanic-Unity
+
+  secondary:
+
+    text: View Portfolio
+
+    url: https://abikarthickgdev.github.io/GAMEDEV_PORTFOLIO/

@@ -1,4 +1,4 @@
-﻿// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 // Single source of truth for the portfolio. One identity: Gameplay Programmer.
 // Add a project, resume variant, or a skill = single push.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1364,35 +1364,107 @@ export const portfolio: PortfolioConfig = {
     },
     {
       id: "basketball-shooter",
-      title: "Basketball Shooter",
+      title: "Basketball Shooting Mechanic",
       engine: "Unity",
-      category: "Gameplay Mechanics",
+      category: "Gameplay Mechanic",
       difficulty: "Intermediate",
       engineVersion: "Unity 6",
       description:
-        "A basketball shooting mechanic built in Unity 6 — content coming soon.",
-      purpose: "Explore arc-based projectile trajectories and basket detection in Unity.",
-      usedIn: "Sports games, trajectory aiming systems, and physics-based gameplay prototypes.",
-      benefit: "Demonstrates parabolic trajectory calculation, physics-based ball launching, and rim collision detection.",
-      experience: "Satisfying arc launch with precise basket entry detection — content details coming soon.",
-      media: {},
+        "A gameplay mechanic prototype built in Unity 6 demonstrating a complete basketball shooting workflow. The mechanic includes player movement, automatic dribbling, hold-to-aim functionality, player rotation toward the hoop, parabolic ball trajectory, physics-based release, and automatic ball collection/reset.",
+      purpose:
+        "Built as a Unity 6 prototype to explore complete basketball shooting gameplay — covering state management, parabolic trajectory, physics handoff, and smooth player interactions all in a single modular C# script.",
+      usedIn: "Sports games, trajectory aiming systems, physics-based gameplay prototypes, and basketball game mechanics.",
+      benefit:
+        "Demonstrates parabolic trajectory calculation, scripted-to-physics ball handoff, dribbling state management, and automatic ball reset — all in a single clean C# architecture.",
+      experience:
+        "Delivers responsive player movement, satisfying dribble feedback, smooth aim-and-shoot arc, and automatic ball collection — creating a polished and complete basketball shooting feel.",
+      media: {
+        preview: "GamePlay_Machnics/Basketball_shooter/Screenshot-1.png",
+        hoverVideo: "GamePlay_Machnics/Basketball_shooter/Basketball-hover.mp4",
+        video: "GamePlay_Machnics/Basketball_shooter/Machnics_play.mp4",
+      },
+      links: {
+        github: "https://github.com/ABIKARTHICKGDEV/Basketball-Shooting-Mechanic-Unity",
+      },
+      articleUrl:
+        "https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7478459075438043137-Dyg6/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U",
       features: [
-        "Arc-based ball trajectory",
-        "Physics-based launching",
-        "Basket detection",
-        "Score system",
+        "Player Movement (WASD / Arrow Keys)",
+        "Automatic Ball Dribbling",
+        "Hold-to-Aim Mechanic (Space Key)",
+        "Automatic Player Rotation Toward Hoop",
+        "Parabolic Shooting Trajectory",
+        "Rigidbody Physics After Release",
+        "Ball Collection and Auto Reset",
+        "Smooth Gameplay Prototype",
       ],
       technologies: [
         "Unity 6",
         "C#",
-        "Rigidbody Physics",
-        "Physics Raycasting",
+        "Unity Rigidbody Physics",
+        "Universal Render Pipeline (URP)",
+        "Parabolic Trajectory Math",
       ],
       learnings: [
-        "Parabolic Trajectory Math",
-        "Physics-Based Launching",
-        "Collision Detection",
-        "Score Systems",
+        "Gameplay State Management",
+        "Parabolic Trajectory Calculation",
+        "Rigidbody Handoff After Scripted Movement",
+        "Player Rotation Toward Dynamic Targets",
+        "Modular C# Architecture",
+        "Basketball Shooting Workflow",
+      ],
+      gallery: {
+        gameplay: [
+          "GamePlay_Machnics/Basketball_shooter/Screenshot-1.png",
+          "GamePlay_Machnics/Basketball_shooter/Screenshot-2.png",
+          "GamePlay_Machnics/Basketball_shooter/Screenshot-3.png",
+          "GamePlay_Machnics/Basketball_shooter/Screenshot-4.png",
+          "GamePlay_Machnics/Basketball_shooter/Screenshot-5.png",
+        ],
+        development: [],
+      },
+      flow:
+        "Player moves using WASD / Arrow Keys\nBall automatically dribbles while player moves\nHold Space to enter Aim Mode\nPlayer auto-rotates toward the basketball hoop\nParabolic trajectory arc is calculated\nRelease Space to launch the ball with physics\nBall travels along arc, handed off to Rigidbody physics\nBall collected automatically after landing and reset to player",
+      architecture:
+        "BasketballController.cs → PlayerMovement → DribbleSystem → AimSystem → TrajectoryCalculator → PhysicsHandler → BallResetSystem",
+      breakdown: [
+        "Player Controller (WASD Movement)",
+        "Dribble Controller (Automatic Dribbling)",
+        "Aim Controller (Hold Space to Aim)",
+        "Shooting System (Parabolic Trajectory)",
+        "Physics Handler (Rigidbody Release)",
+        "Ball Reset System (Auto Collection)",
+      ],
+      steps: [
+        "Implement player character movement with WASD / Arrow Keys",
+        "Add automatic ball dribbling animation while player is active",
+        "Implement hold-to-aim mechanic using Space key input",
+        "Code automatic player rotation toward the basketball hoop",
+        "Calculate and visualize parabolic ball trajectory arc",
+        "On release, hand off ball to Rigidbody physics for realistic flight",
+        "Detect ball landing and auto-collect / reset to player",
+      ],
+      challenges: [
+        {
+          challenge: "Creating a smooth parabolic ball trajectory.",
+          solution:
+            "Calculated the required launch velocity using kinematic equations, lerping the ball along the arc path frame-by-frame during the scripted phase before handing off to Rigidbody physics.",
+        },
+        {
+          challenge: "Combining scripted movement with Unity physics.",
+          solution:
+            "Disabled Rigidbody physics during the scripted trajectory arc and re-enabled gravity and velocity on release, ensuring a clean transition from scripted to physics-driven flight.",
+        },
+        {
+          challenge: "Managing transitions between dribbling, aiming, shooting, and reset states.",
+          solution:
+            "Implemented a clear state machine within BasketballController.cs to track and transition between Idle, Dribbling, Aiming, Shooting, and Reset states without state bleed.",
+        },
+        {
+          challenge: "Maintaining responsive gameplay controls.",
+          solution:
+            "Kept all input reading in Update() and physics/movement in FixedUpdate(), ensuring input responsiveness regardless of frame rate while physics remained stable.",
+        },
       ],
     },
     {
