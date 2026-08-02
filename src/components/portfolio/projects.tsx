@@ -12,7 +12,12 @@ export function Projects() {
   const featuredId = portfolio.featuredProjectId;
 
   const filtered = useMemo(
-    () => (filter === "all" ? all : all.filter((p) => p.tags.includes(filter))),
+    () =>
+      filter === "all"
+        ? all
+        : all.filter((p) =>
+            p.tags.some((t) => t.toLowerCase() === filter.toLowerCase())
+          ),
     [all, filter],
   );
 
@@ -21,7 +26,7 @@ export function Projects() {
     [all],
   );
   const unrealGrouped = useMemo(
-    () => all.filter((p) => p.tags.includes("unreal")),
+    () => all.filter((p) => p.tags.some((t) => t.toLowerCase() === "unreal")),
     [all],
   );
 

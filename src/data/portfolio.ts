@@ -38,6 +38,17 @@ export interface Project {
     editor: string[];
     flowDiagram?: string;
   };
+  /** Blueprint screenshots section — only rendered for Unreal/Blueprint projects */
+  blueprintGallery?: {
+    title: string;
+    description: string;
+    images: string[];
+  };
+  /** GDD / PDF documentation attached to the project */
+  documentation?: {
+    title: string;
+    pdf: string;
+  };
   links: {
     itch?: string;
     itchEmbedUrl?: string;
@@ -626,6 +637,242 @@ export const portfolio: PortfolioConfig = {
         screenshot: "Project_Assets/Chargecollector/Gameplay.png",
         hoverVideo: "Project_Assets/Chargecollector/Gameplay_hover_vid.mp4",
         video: "Project_Assets/Chargecollector/Gameplay.mp4",
+      },
+    },
+    {
+      id: "cat-endless-runner-unreal",
+      title: "Cat Endless Runner",
+      category: "3D Endless Runner",
+      description:
+        "Cat Endless Runner is a 3D endless runner prototype developed in Unreal Engine 5.6 using Blueprint Visual Scripting. Originally developed on 26 April 2026, the project features procedural level generation, dynamic obstacle spawning, collectibles, score progression, lane switching, and increasing gameplay difficulty. This project showcases Blueprint-driven gameplay architecture and serves as an important milestone in my Unreal Engine learning journey.",
+
+      tags: ["unreal", "3d", "blueprint"],
+
+      tech: [
+        "Unreal Engine 5.6",
+        "Blueprint Visual Scripting",
+        "Unreal Physics",
+        "UMG (UI)",
+        "Unreal Audio System",
+        "Unreal Engine Renderer",
+      ],
+
+      features: [
+        "Infinite procedural level generation",
+        "Blueprint-only gameplay implementation",
+        "Dynamic obstacle spawning",
+        "Coin collection system",
+        "Distance and score tracking",
+        "Progressive gameplay difficulty",
+        "Lane switching mechanics",
+        "Collision and game-over system",
+        "Android prototype support",
+      ],
+
+      gameplay: [
+        {
+          title: "Infinite Procedural Level Generation",
+          description:
+            "The game generates tiles endlessly using Blueprint logic, seamlessly spawning and destroying level pieces to create a continuous world that never repeats. This was implemented entirely through the GM_EndlessRunner Blueprint.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-1.png",
+        },
+        {
+          title: "Dynamic Obstacle Spawning",
+          description:
+            "Obstacles are spawned procedurally at runtime using Blueprint event graphs. Spawn frequency and variety increase over time, escalating difficulty as the run progresses.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-2.png",
+        },
+        {
+          title: "Lane Switching Mechanics",
+          description:
+            "The player can switch between three lanes using keyboard input (A/D or Arrow Keys). Lane transitions use smooth interpolation managed through the Set_Lane_Location Blueprint function to ensure responsive and polished movement.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-3.png",
+        },
+        {
+          title: "Jump Mechanics",
+          description:
+            "A Blueprint-driven jump system allows the player to vault over obstacles. The Check Jump After event handles post-jump logic to keep gameplay responsive and accurate.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-4.png",
+        },
+        {
+          title: "Coin Collection System",
+          description:
+            "Fish collectibles spawn through the GM_EndlessRunner-Spawn_fishes Blueprint. Collecting them awards points and contributes to the player's overall score.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-5.png",
+        },
+        {
+          title: "Score & Difficulty Progression",
+          description:
+            "Distance travelled and collectibles gathered drive the score system. The Endless Controller Blueprint monitors progress and ramps up obstacle density and spawn speed over time.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-1.png",
+        },
+        {
+          title: "Collision & Game Over System",
+          description:
+            "Collision events trigger the Game Over state through Blueprint event dispatchers, stopping gameplay and displaying the final score with a restart option.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-2.png",
+        },
+        {
+          title: "Android Prototype Support",
+          description:
+            "The project was packaged for Android with on-screen touch controls, demonstrating cross-platform deployment capability with Unreal Engine 5.6.",
+          image: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-3.png",
+        },
+      ],
+
+      systems: [
+        {
+          title: "Endless Tile Generation",
+          description: "Procedurally spawns and recycles level tiles to create infinite terrain using GM_EndlessRunner Blueprint logic.",
+        },
+        {
+          title: "Dynamic Obstacle Spawning",
+          description: "Spawns varied obstacles at runtime with increasing frequency, managed by the GM_EndlessRunner-Spawn_Obstacles Blueprint graph.",
+        },
+        {
+          title: "Fish Spawn System",
+          description: "Controls collectible fish spawning through GM_EndlessRunner-Spawn_fishes, rewarding players for collection.",
+        },
+        {
+          title: "Lane Switching",
+          description: "Handles smooth three-lane transitions using Set_Lane_Location Blueprint function inside BP_ThirdPersonCharacter.",
+        },
+        {
+          title: "Player Movement & Jump",
+          description: "Full character movement including lane switching, jump, and post-jump checks implemented in BP_ThirdPersonCharacter Blueprint graphs.",
+        },
+        {
+          title: "Score Tracking",
+          description: "Tracks player distance and collectibles, updating the score display via UMG Blueprint widgets in real time.",
+        },
+        {
+          title: "Difficulty Progression",
+          description: "The Endless Controller Blueprint increases spawn speed and obstacle density as the run extends.",
+        },
+        {
+          title: "Game Over System",
+          description: "Collision detection triggers game over state via Blueprint event dispatchers, halting gameplay and showing results.",
+        },
+        {
+          title: "Blueprint Event Architecture",
+          description: "All gameplay systems are wired together through Blueprint event graphs, custom events, and function calls — no C++ required.",
+        },
+      ],
+
+      architectureModules: [
+        "Player Character",
+        "Endless Controller",
+        "Tile Spawner",
+        "Obstacle Spawner",
+        "Fish Spawn System",
+        "Lane Switching",
+        "Jump System",
+        "Gameplay Controller",
+      ],
+
+      projectImpact: {
+        problem:
+          "Build a fully functional 3D endless runner in Unreal Engine 5.6 using only Blueprint Visual Scripting — covering procedural generation, lane switching, collectibles, score progression, and cross-platform support.",
+        solution:
+          "Implemented all gameplay systems through Blueprint graphs including procedural tile generation, dynamic obstacle and collectible spawning, smooth lane switching, jump mechanics, a score tracker, difficulty ramp, and a game over flow — deployed on Windows and packaged as an Android prototype.",
+      },
+
+      metrics: {
+        type: "3D Endless Runner",
+        platform: "Windows / Android",
+        engine: "Unreal Engine 5.6",
+        language: "Blueprint Visual Scripting",
+        teamSize: "Solo",
+        devTime: "April 2026",
+        status: "Completed",
+      },
+
+      challenges: [
+        {
+          challenge: "Designing an endless procedural spawning system using Blueprints.",
+          solution:
+            "Built the tile and obstacle spawning logic entirely in GM_EndlessRunner Blueprint graphs, using custom events and timers to manage spawn cycles without C++.",
+        },
+        {
+          challenge: "Building gameplay entirely without C++.",
+          solution:
+            "Leveraged Blueprint's full event system, custom functions, and event dispatchers to replicate architecture patterns typically done in C++.",
+        },
+        {
+          challenge: "Implementing smooth lane switching.",
+          solution:
+            "Created a dedicated Set_Lane_Location function in BP_ThirdPersonCharacter that interpolates the character's position between lanes using timeline nodes.",
+        },
+        {
+          challenge: "Managing obstacle spawning and cleanup.",
+          solution:
+            "Used Actor lifecycle events and Blueprint timers to spawn obstacles ahead of the player and destroy them once they passed behind, keeping memory usage efficient.",
+        },
+        {
+          challenge: "Creating scalable gameplay progression.",
+          solution:
+            "The Endless Controller Blueprint monitors elapsed time and distance, adjusting spawn intervals and obstacle variety at defined milestones to increase difficulty smoothly.",
+        },
+      ],
+
+      learnings: [
+        "Blueprint Architecture",
+        "Event-Driven Gameplay Programming",
+        "Procedural Gameplay Systems",
+        "Actor Spawning & Lifecycle Management",
+        "Gameplay Flow Design",
+        "Unreal Engine Framework Fundamentals",
+        "UMG UI Implementation",
+        "Cross-Platform Deployment (Android)",
+      ],
+
+      gallery: {
+        gameplay: [
+          "Project_Assets/Cat-Endless-Runner-Unreal/Gameplay.mp4",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-1.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-2.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-3.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-4.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-5.png",
+        ],
+        development: [],
+        editor: [],
+      },
+
+      blueprintGallery: {
+        title: "Blueprint Implementation",
+        description:
+          "Blueprint screenshots showcasing the gameplay systems and architecture implemented in Unreal Engine 5.6.",
+        images: [
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Move.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Aim.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Check Jump After.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Set_Lane_Location.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/Endless_Controller.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/GM_EndlessRunner-Spawn_Tiles.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/GM_EndlessRunner-Spawn_Obstacles.png",
+          "Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/GM_EndlessRunner-Spawn_fishes.png",
+        ],
+      },
+
+      documentation: {
+        title: "Game Design Document",
+        pdf: "Project_Assets/Cat-Endless-Runner-Unreal/Endless Runner Game Documentation.pdf",
+      },
+
+      links: {
+        itch: "https://abikarthick.itch.io/cat-endless-runner",
+        github: "https://github.com/ABIKARTHICKGDEV/Cat-Endless-Runner-Unreal",
+        linkedin:
+          "https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-blueprints-ugcPost-7489651112254296064-2FI3/",
+      },
+
+      media: {
+        banner: "Project_Assets/Cat-Endless-Runner-Unreal/Logo.png",
+        screenshot: "Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-1.png",
+        hoverVideo: "Project_Assets/Cat-Endless-Runner-Unreal/HoverVideo.mp4",
+        video: "Project_Assets/Cat-Endless-Runner-Unreal/Gameplay.mp4",
       },
     },
     {

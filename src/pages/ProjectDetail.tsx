@@ -32,6 +32,8 @@ import Metrics from "@/components/portfolio/project-detail/Metrics";
 import LessonsLearned from "@/components/portfolio/project-detail/LessonsLearned";
 import SourceCode from "@/components/portfolio/project-detail/SourceCode";
 import ProjectFooterCTA from "@/components/portfolio/project-detail/ProjectFooterCTA";
+import BlueprintGallery from "@/components/portfolio/project-detail/BlueprintGallery";
+import DocumentationSection from "@/components/portfolio/project-detail/DocumentationSection";
 import { siteConfig } from "@/config/site";
 import NotFound from "./NotFound";
 
@@ -100,6 +102,7 @@ export default function ProjectDetail() {
       <ProjectPlay project={project} />
       <ProjectShowcase project={project} />
       <ProjectGallery project={project} />
+      <BlueprintGallery project={project} />
       <GameplayOverview project={project} />
       <GameplaySystems project={project} />
       <DevelopmentTimeline project={project} />
@@ -109,6 +112,7 @@ export default function ProjectDetail() {
       <Metrics project={project} />
       <LessonsLearned project={project} />
       <SourceCode project={project} />
+      <DocumentationSection project={project} />
       <ProjectFooterCTA project={project} />
 
       <Footer />

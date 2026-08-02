@@ -1,0 +1,385 @@
+type: project
+
+# ==========================================================
+# BASIC INFORMATION
+# ==========================================================
+
+id: cat-endless-runner-unreal
+
+slug: cat-endless-runner-unreal
+
+title: Cat Endless Runner
+
+subtitle: Blueprint-Based 3D Endless Runner Prototype
+
+description: >
+  Cat Endless Runner is a 3D endless runner prototype developed in Unreal Engine 5.6
+  using Blueprint Visual Scripting. Originally developed on 26 April 2026, the project
+  features procedural level generation, dynamic obstacle spawning, collectibles, score
+  progression, lane switching, and increasing gameplay difficulty. This project
+  showcases Blueprint-driven gameplay architecture and serves as an important milestone
+  in my Unreal Engine learning journey.
+
+shortDescription: >
+  Blueprint-based 3D endless runner prototype built in Unreal Engine 5.6.
+
+featured: false
+
+status: Completed
+
+visibility: public
+
+category: Game
+
+genre: Endless Runner
+
+created: 2026-04-26
+
+lastUpdated: 2026-08-02
+
+version: 1.0
+
+engine: Unreal Engine
+
+engineVersion: 5.6
+
+language: Blueprint Visual Scripting
+
+platforms:
+  - Windows
+  - Android
+
+developmentTime: April 2026
+
+teamSize: Solo
+
+role: Gameplay Programmer
+
+difficulty:
+
+parentProject:
+
+# ==========================================================
+# LINKS
+# ==========================================================
+
+links:
+
+  play: https://abikarthick.itch.io/cat-endless-runner
+
+  github: https://github.com/ABIKARTHICKGDEV/Cat-Endless-Runner-Unreal
+
+  portfolio: https://abikarthickgdev.github.io/GAMEDEV_PORTFOLIO/
+
+  itch: https://abikarthick.itch.io/cat-endless-runner
+
+  linkedin: https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-blueprints-ugcPost-7489651112254296064-2FI3/
+
+  documentation: Project_Assets/Cat-Endless-Runner-Unreal/Endless Runner Game Documentation.pdf
+
+  youtube:
+
+  devlog:
+
+  download:
+
+# ==========================================================
+# MEDIA
+# ==========================================================
+
+media:
+
+  thumbnail: Project_Assets/Cat-Endless-Runner-Unreal/Logo.png
+
+  cardImage: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-1.png
+
+  banner: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-2.png
+
+  heroImage: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-5.png
+
+  icon: Project_Assets/Cat-Endless-Runner-Unreal/icon.ico
+
+  videos:
+
+    trailer:
+
+    hoverPreview: Project_Assets/Cat-Endless-Runner-Unreal/HoverVideo.mp4
+
+    gameplay: Project_Assets/Cat-Endless-Runner-Unreal/Gameplay.mp4
+
+    teaser:
+
+  gallery:
+
+    - image: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-1.png
+
+    - image: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-2.png
+
+    - image: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-3.png
+
+    - image: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-4.png
+
+    - image: Project_Assets/Cat-Endless-Runner-Unreal/Screenshot-5.png
+
+blueprintGallery:
+
+    title: Blueprint Implementation
+
+    description: >
+      Blueprint screenshots showcasing the gameplay systems and architecture
+      implemented in Unreal Engine 5.6.
+
+    images:
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Move.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Aim.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Check Jump After.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/BP_ThirdPersonCharacter-Set_Lane_Location.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/Endless_Controller.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/GM_EndlessRunner-Spawn_Tiles.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/GM_EndlessRunner-Spawn_Obstacles.png
+
+      - Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/GM_EndlessRunner-Spawn_fishes.png
+
+documentation:
+
+  title: Game Design Document
+
+  pdf: Project_Assets/Cat-Endless-Runner-Unreal/Endless Runner Game Documentation.pdf
+
+# ==========================================================
+# TAGS
+# ==========================================================
+
+tags:
+
+  - Unreal Engine
+  - Unreal Engine 5.6
+  - Blueprint
+  - Blueprint Visual Scripting
+  - Gameplay Programming
+  - Endless Runner
+  - Procedural Generation
+  - Lane Switching
+  - Obstacle Spawning
+  - Collectibles
+  - Android
+  - Windows
+  - Solo Project
+
+# ==========================================================
+# FEATURES
+# ==========================================================
+
+features:
+
+  - Infinite procedural level generation
+  - Blueprint-only gameplay implementation
+  - Dynamic obstacle spawning
+  - Coin collection system
+  - Distance and score tracking
+  - Progressive gameplay difficulty
+  - Lane switching mechanics
+  - Collision and game-over system
+  - Android prototype support
+
+# ==========================================================
+# GAMEPLAY
+# ==========================================================
+
+gameplay:
+
+  objective: >
+    Run as far as possible while avoiding obstacles, collecting coins,
+    and achieving the highest possible score.
+
+  controls:
+
+    keyboard:
+      - A / Left Arrow : Move Left
+      - D / Right Arrow : Move Right
+      - Space : Jump
+
+    mouse: None
+
+    gamepad: Not Implemented
+
+    mobile:
+      - On-screen touch controls
+
+  winCondition: Endless high-score gameplay
+
+  loseCondition: Hit an obstacle.
+
+# ==========================================================
+# SYSTEMS
+# ==========================================================
+
+systems:
+
+  - Endless Tile Generation
+  - Dynamic Obstacle Spawning
+  - Fish Spawn System
+  - Lane Switching
+  - Player Movement
+  - Jump Mechanics
+  - Coin Collection
+  - Score Tracking
+  - Difficulty Progression
+  - Game Over System
+  - Blueprint Event Architecture
+
+# ==========================================================
+# TECH STACK
+# ==========================================================
+
+techStack:
+
+  engine: Unreal Engine 5.6
+
+  language: Blueprint Visual Scripting
+
+  physics: Unreal Physics
+
+  ui: UMG
+
+  networking: None
+
+  ai: None
+
+  audio: Unreal Audio System
+
+  rendering: Unreal Engine Renderer
+
+# ==========================================================
+# SOURCE CODE
+# ==========================================================
+
+sourceCode:
+
+  repository: Blueprint-based project (No C++ source code)
+
+  scripts: Blueprint Graphs
+
+  totalScripts: 9 Blueprint screenshots included
+
+# ==========================================================
+# CHALLENGES
+# ==========================================================
+
+challenges:
+
+  - Designing an endless procedural spawning system using Blueprints.
+  - Building gameplay entirely without C++.
+  - Implementing smooth lane switching.
+  - Managing obstacle spawning and cleanup.
+  - Creating scalable gameplay progression.
+
+# ==========================================================
+# LESSONS LEARNED
+# ==========================================================
+
+lessonsLearned:
+
+  - Blueprint architecture
+  - Event-driven gameplay programming
+  - Procedural gameplay systems
+  - Actor spawning and lifecycle management
+  - Gameplay flow design
+  - Unreal Engine framework fundamentals
+
+# ==========================================================
+# METRICS
+# ==========================================================
+
+metrics:
+
+  created: 2026-04-26
+
+  completed: 2026-04-26
+
+  updated: 2026-08-02
+
+  commits:
+
+  scenes: 1
+
+  prefabs:
+
+  scripts: Blueprint Only
+
+  codeLines: N/A
+
+# ==========================================================
+# TIMELINE
+# ==========================================================
+
+timeline:
+
+  - 2026-04-26 : Initial project completed.
+  - 2026-08-02 : Repository, documentation, portfolio assets, Blueprint gallery, and portfolio entry published.
+
+# ==========================================================
+# ARCHITECTURE
+# ==========================================================
+
+architecture:
+
+  image: Project_Assets/Cat-Endless-Runner-Unreal/Blueprint_Screenshots/
+
+  modules:
+
+    - Player Character
+    - Endless Controller
+    - Tile Spawner
+    - Obstacle Spawner
+    - Fish Spawn System
+    - Lane Switching
+    - Jump System
+    - Gameplay Controller
+
+# ==========================================================
+# PORTFOLIO DISPLAY
+# ==========================================================
+
+display:
+
+  order:
+
+  showOnHome: false
+
+  showInFeatured: false
+
+  showTimeline: true
+
+# ==========================================================
+# CALL TO ACTION
+# ==========================================================
+
+cta:
+
+  title: Explore the Project
+
+  description: >
+    Watch the gameplay, browse the Blueprint implementation, read the game
+    documentation, or explore the GitHub repository.
+
+  primary:
+
+    text: View GitHub Repository
+
+    url: https://github.com/ABIKARTHICKGDEV/Cat-Endless-Runner-Unreal
+
+  secondary:
+
+    text: Play on itch.io
+
+    url: https://abikarthick.itch.io/cat-endless-runner
