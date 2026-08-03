@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { asset } from "@/lib/asset";
-import { Play, Pause, Github, Linkedin, Volume2, VolumeX, Construction } from "lucide-react";
+import { Play, Pause, Github, Linkedin, Volume2, VolumeX, Construction, Globe } from "lucide-react";
 
 export default function ProjectHero({ project }: { project: any }) {
   const bgVideo = project.media?.video;
@@ -146,6 +146,17 @@ export default function ProjectHero({ project }: { project: any }) {
                 className="btn-ghost-steam inline-flex items-center gap-2 px-4 py-2"
               >
                 <Github className="h-4 w-4" /> GitHub
+              </a>
+            ) : null}
+
+            {project.links?.ggj ? (
+              <a
+                href={project.links.ggj}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost-steam inline-flex items-center gap-2 px-4 py-2"
+              >
+                <Globe className="h-4 w-4" /> GGJ Submission
               </a>
             ) : null}
 

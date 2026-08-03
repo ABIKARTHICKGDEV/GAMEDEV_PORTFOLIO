@@ -54,6 +54,7 @@ export interface Project {
     itchEmbedUrl?: string;
     github?: string;
     linkedin: string | null;
+    ggj?: string;
     details?: string;
   };
   media?: ProjectMedia;
@@ -1094,6 +1095,206 @@ export const portfolio: PortfolioConfig = {
         screenshot: "Project_Assets/EthernalCheck/Images/screenshot-1.png",
         hoverVideo: "Project_Assets/EthernalCheck/Hover_Video.mp4",
         video: "Project_Assets/EthernalCheck/Gameplay.mp4",
+      },
+    },
+    {
+      id: "ggj26-beneath-the-mask",
+      title: "Beneath The Mask",
+      category: "Narrative Horror Puzzle",
+      description:
+        "BENEATH THE MASK is a narrative-driven horror puzzle game developed during Global Game Jam 2026 by a collaborative development team. Built within the official one-week game jam timeline, the project challenged the team to rapidly prototype gameplay mechanics, implement interactive events, and deliver a polished playable experience under strict time constraints. My primary contribution focused on gameplay programming, interaction systems, event triggers, gameplay logic implementation, debugging, and integrating gameplay features with the rest of the project.",
+
+      tags: ["unreal", "3d", "blueprint", "game-jam"],
+
+      tech: [
+        "Unreal Engine 5.5",
+        "Blueprint Visual Scripting",
+        "Unreal Physics",
+        "UMG (UI)",
+        "Blueprint AI",
+        "Unreal Audio",
+        "Unreal Engine Renderer",
+      ],
+
+      features: [
+        "Environmental Exploration",
+        "Puzzle Solving",
+        "Interactive NPCs",
+        "Story Events",
+        "Trigger-Based Gameplay",
+        "Horror Atmosphere",
+        "Interactive Objects",
+        "Event Driven Gameplay",
+      ],
+
+      gameplay: [
+        {
+          title: "Environmental Exploration",
+          description:
+            "Navigate a richly detailed horror environment filled with interactive objects, hidden clues, and atmospheric storytelling. The level design was crafted to immerse the player in the game's unsettling mystery from the very first step.",
+          image: "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-1.png",
+        },
+        {
+          title: "Puzzle Solving",
+          description:
+            "Solve environmental puzzles embedded within the world to progress the narrative. Each puzzle is tied to the story, rewarding exploration and thoughtful interaction with the environment.",
+          image: "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-2.png",
+        },
+        {
+          title: "Interactive NPCs",
+          description:
+            "Encounter characters whose behaviour is driven by Blueprint event graphs. NPCs react to player actions through a trigger-based interaction system, advancing story beats and revealing narrative layers.",
+          image: "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-3.png",
+        },
+        {
+          title: "Story Events & Trigger System",
+          description:
+            "Key narrative moments are delivered through a custom Blueprint trigger system. Entering specific zones, interacting with objects, or approaching NPCs fires story events that progress the game's mystery.",
+          image: "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-1.png",
+        },
+        {
+          title: "Horror Atmosphere",
+          description:
+            "A carefully constructed horror atmosphere built through environmental storytelling, audio design, lighting, and carefully timed events — all working together to create tension and dread throughout the experience.",
+          image: "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-2.png",
+        },
+        {
+          title: "Blueprint Event Architecture",
+          description:
+            "All gameplay systems — interactions, triggers, NPC behaviours, and story events — are implemented through Unreal Engine Blueprint event graphs, custom events, and function calls, reflecting a clean and scalable Blueprint-first architecture.",
+          image: "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-3.png",
+        },
+      ],
+
+      systems: [
+        {
+          title: "Trigger System",
+          description: "Custom Blueprint triggers fire story events when the player enters defined zones or interacts with specific objects.",
+        },
+        {
+          title: "Interaction System",
+          description: "A modular interaction system allows players to engage with objects and NPCs, driving puzzle progression and narrative delivery.",
+        },
+        {
+          title: "NPC Behaviour",
+          description: "Blueprint-driven NPC logic handles character reactions, patrol states, and event responses throughout the game world.",
+        },
+        {
+          title: "Gameplay Logic",
+          description: "Core gameplay flow and state management implemented through Blueprint event graphs, ensuring smooth transitions between exploration, puzzles, and story moments.",
+        },
+        {
+          title: "Story Progression",
+          description: "A narrative progression system manages the delivery of story events and unlocks new areas and interactions as the player advances.",
+        },
+        {
+          title: "Environmental Events",
+          description: "Dynamic environmental reactions — sounds, animations, lighting changes — are coordinated through Blueprint to reinforce the horror atmosphere.",
+        },
+      ],
+
+      architectureModules: [
+        "Trigger System",
+        "Interaction System",
+        "NPC Behaviour",
+        "Gameplay Logic",
+        "Story Progression",
+        "Environmental Events",
+        "Blueprint Event Architecture",
+      ],
+
+      projectImpact: {
+        problem:
+          "Develop a complete, polished narrative horror puzzle game in a single week during Global Game Jam 2026, coordinating with a team while delivering gameplay programming, interaction systems, event triggers, and full gameplay integration under a strict deadline.",
+        solution:
+          "Contributed as the Gameplay Programmer — implementing Blueprint-driven trigger systems, interactive NPC behaviours, gameplay logic, and story event integration — shipping a fully playable horror experience within the jam timeline.",
+      },
+
+      metrics: {
+        type: "Narrative Horror Puzzle",
+        platform: "Windows",
+        engine: "Unreal Engine 5.5",
+        language: "Blueprint Visual Scripting",
+        teamSize: "Team Project",
+        devTime: "1 Week (GGJ 2026)",
+        status: "Completed",
+      },
+
+      challenges: [
+        {
+          challenge: "Delivering a complete playable experience within one week.",
+          solution:
+            "Prioritised core gameplay loop — movement, interaction, and triggers — first, then layered in NPC events and story progression as time allowed, keeping scope realistic and achievable.",
+        },
+        {
+          challenge: "Coordinating development among multiple team members.",
+          solution:
+            "Established clear ownership — I owned gameplay programming and event systems — while maintaining constant communication with the team to integrate assets and systems cleanly.",
+        },
+        {
+          challenge: "Rapid gameplay iteration under strict deadlines.",
+          solution:
+            "Used Blueprint's rapid iteration advantage to test and adjust triggers, interactions, and events in real time without long recompile cycles, allowing fast feedback loops during the jam.",
+        },
+        {
+          challenge: "Integrating gameplay systems efficiently with team assets.",
+          solution:
+            "Built modular trigger and interaction blueprints that could accept any asset or NPC, making it straightforward for the team to drop in art and audio without breaking gameplay logic.",
+        },
+      ],
+
+      learnings: [
+        "Game Jam Development",
+        "Team Collaboration",
+        "Rapid Prototyping",
+        "Blueprint Event Systems",
+        "Trigger-Based Gameplay Design",
+        "NPC Interaction Programming",
+        "Efficient Communication Under Pressure",
+        "Feature Prioritisation",
+      ],
+
+      gallery: {
+        gameplay: [
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Gameplay.mp4",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-1.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-2.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-3.png",
+        ],
+        development: [],
+        editor: [],
+      },
+
+      blueprintGallery: {
+        title: "Blueprint Implementation",
+        description:
+          "Blueprint event graphs showcasing the gameplay systems, interaction logic, trigger system, and NPC behaviour implemented during Global Game Jam 2026 in Unreal Engine 5.5.",
+        images: [
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_CCTV1-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_GraveyardTrigger-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_HouseExitTrigger-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_HouseMaskTrigger-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_HouseTrigger-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_Mask-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_oldMan-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_YoungGirl-EventGraph.png",
+          "Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/bp+kUTTY-EventGraph.png",
+        ],
+      },
+
+      links: {
+        itch: "https://abikarthick.itch.io/beneath-the-mask",
+        github: "https://github.com/ABIKARTHICKGDEV/GGJ26-BENEATH-THE-MASK",
+        ggj: "https://globalgamejam.org/games/2026/beneath-mask-8",
+        linkedin:
+          "https://www.linkedin.com/posts/abikarthick_globalgamejam-ggj2026-gamedevelopment-ugcPost-7490116816581861376-gBmk/",
+      },
+
+      media: {
+        banner: "Project_Assets/GGJ26-BENEATH-THE-MASK/Thumbnail.png",
+        screenshot: "Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-1.png",
+        hoverVideo: "Project_Assets/GGJ26-BENEATH-THE-MASK/Hovervideo.mp4",
+        video: "Project_Assets/GGJ26-BENEATH-THE-MASK/Gameplay.mp4",
       },
     },
     {

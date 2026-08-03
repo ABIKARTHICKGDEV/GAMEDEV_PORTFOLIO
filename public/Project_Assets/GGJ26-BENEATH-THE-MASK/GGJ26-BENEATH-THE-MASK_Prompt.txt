@@ -1,0 +1,354 @@
+type: project
+
+# ==========================================================
+# BASIC INFORMATION
+# ==========================================================
+
+id: ggj26-beneath-the-mask
+
+slug: ggj26-beneath-the-mask
+
+title: BENEATH THE MASK
+
+subtitle: Global Game Jam 2026 Team Project
+
+description: |
+  BENEATH THE MASK is a narrative-driven horror puzzle game developed during
+  Global Game Jam 2026 by a collaborative development team.
+
+  Built within the official one-week game jam timeline, the project challenged
+  the team to rapidly prototype gameplay mechanics, implement interactive events,
+  and deliver a polished playable experience under strict time constraints.
+
+  My primary contribution focused on gameplay programming, interaction systems,
+  event triggers, gameplay logic implementation, debugging, and integrating
+  gameplay features with the rest of the project.
+
+  This project strengthened my skills in rapid prototyping, collaborative
+  development, problem solving, and delivering features within a fixed deadline.
+
+shortDescription: |
+  Narrative horror puzzle game created during Global Game Jam 2026 as a collaborative team project.
+
+featured: false
+
+status: Completed
+
+visibility: public
+
+category: Game
+
+genre:
+  - Horror
+  - Puzzle
+  - Narrative
+  - Exploration
+  - Game Jam
+
+created: 2026-01-26
+
+lastUpdated: 2026-02-01
+
+version: 1.0
+
+engine: Unreal Engine 5
+
+engineVersion: Unreal Engine 5.5
+
+language:
+  - Blueprint Visual Scripting
+
+platforms:
+  - Windows
+
+developmentTime: 1 Week
+
+teamSize: Team Project
+
+role:
+  - Gameplay Programmer
+  - Gameplay Logic
+  - Event Systems
+  - Integration
+  - Bug Fixing
+
+# ==========================================================
+# LINKS
+# ==========================================================
+
+links:
+
+  play: https://abikarthick.itch.io/beneath-the-mask
+
+  github: https://github.com/ABIKARTHICKGDEV/GGJ26-BENEATH-THE-MASK
+
+  portfolio: https://abikarthickgdev.github.io/GAMEDEV_PORTFOLIO/
+
+  itch: https://abikarthick.itch.io/beneath-the-mask
+
+  linkedin: https://www.linkedin.com/posts/abikarthick_globalgamejam-ggj2026-gamedevelopment-ugcPost-7490116816581861376-gBmk/
+
+  documentation:
+
+  youtube:
+
+  devlog: https://globalgamejam.org/games/2026/beneath-mask-8
+
+  download:
+
+# ==========================================================
+# MEDIA
+# ==========================================================
+
+media:
+
+  thumbnail: Project_Assets/GGJ26-BENEATH-THE-MASK/Thumbnail.png
+
+  cardImage: Project_Assets/GGJ26-BENEATH-THE-MASK/Thumbnail.png
+
+  banner: Project_Assets/GGJ26-BENEATH-THE-MASK/Thumbnail.png
+
+  heroImage: Project_Assets/GGJ26-BENEATH-THE-MASK/Thumbnail.png
+
+  icon: Project_Assets/GGJ26-BENEATH-THE-MASK/Thumbnail.png
+
+  videos:
+
+    trailer:
+
+    hoverPreview: Project_Assets/GGJ26-BENEATH-THE-MASK/Hovervideo.mp4
+
+    gameplay: Project_Assets/GGJ26-BENEATH-THE-MASK/Gameplay.mp4
+
+    teaser:
+
+  gallery:
+
+    ## Gameplay
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-1.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-2.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Screenshot-3.png
+
+    ## Blueprint Showcase
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_CCTV1-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_GraveyardTrigger-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_HouseExitTrigger-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_HouseMaskTrigger-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_HouseTrigger-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_Mask-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_oldMan-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/BP_YoungGirl-EventGraph.png
+
+    - image: Project_Assets/GGJ26-BENEATH-THE-MASK/Blueprints/bp+kUTTY-EventGraph.png
+
+# ==========================================================
+# TAGS
+# ==========================================================
+
+tags:
+
+  - Global Game Jam
+  - GGJ2026
+  - Unreal Engine
+  - Blueprint
+  - Horror
+  - Puzzle
+  - Narrative
+  - Exploration
+  - Gameplay Programming
+  - Event System
+  - Interaction
+  - Team Project
+  - Rapid Prototyping
+
+# ==========================================================
+# FEATURES
+# ==========================================================
+
+features:
+
+  - Environmental Exploration
+  - Puzzle Solving
+  - Interactive NPCs
+  - Story Events
+  - Trigger-Based Gameplay
+  - Horror Atmosphere
+  - Interactive Objects
+  - Event Driven Gameplay
+
+# ==========================================================
+# GAMEPLAY
+# ==========================================================
+
+gameplay:
+
+  objective: Solve environmental puzzles and uncover the mystery hidden beneath the mask.
+
+  controls:
+
+    keyboard: WASD, Interaction Keys
+
+    mouse: Camera & Interaction
+
+    gamepad:
+
+    mobile:
+
+  winCondition: Complete all objectives and finish the narrative.
+
+  loseCondition: Depends on gameplay progression.
+
+# ==========================================================
+# SYSTEMS
+# ==========================================================
+
+systems:
+
+  - Trigger System
+  - Event System
+  - NPC Interaction
+  - Gameplay Logic
+  - Environmental Events
+  - Story Progression
+
+# ==========================================================
+# TECH STACK
+# ==========================================================
+
+techStack:
+
+  engine: Unreal Engine 5.5
+
+  language: Blueprint Visual Scripting
+
+  physics: Unreal Physics
+
+  ui: UMG (Unreal Motion Graphics)
+
+  networking: None
+
+  ai: NPC Behaviour (Blueprint)
+
+  audio: Unreal Audio
+
+  rendering: Unreal Engine Renderer
+
+# ==========================================================
+# SOURCE CODE
+# ==========================================================
+
+sourceCode:
+
+  repository: Public
+
+  scripts: Gameplay Systems
+
+  totalScripts: Multiple Gameplay Scripts
+
+# ==========================================================
+# CHALLENGES
+# ==========================================================
+
+challenges:
+
+  - Delivering a complete playable experience within one week.
+  - Coordinating development among multiple team members.
+  - Rapid gameplay iteration under strict deadlines.
+  - Integrating gameplay systems efficiently.
+
+# ==========================================================
+# LESSONS LEARNED
+# ==========================================================
+
+lessonsLearned:
+
+  - Working effectively in a multidisciplinary team.
+  - Rapid game prototyping.
+  - Efficient communication during game jams.
+  - Prioritizing features under time constraints.
+  - Delivering a polished experience within limited development time.
+
+# ==========================================================
+# METRICS
+# ==========================================================
+
+metrics:
+
+  created: 2026-01-26
+
+  completed: 2026-02-01
+
+  updated: 2026-02-01
+
+# ==========================================================
+# TIMELINE
+# ==========================================================
+
+timeline:
+
+  - January 26, 2026 — Global Game Jam Begins
+  - January 27–31 — Gameplay Development & Team Collaboration
+  - February 1, 2026 — Final Submission
+
+# ==========================================================
+# ARCHITECTURE
+# ==========================================================
+
+architecture:
+
+  image:
+
+  modules:
+
+    - Gameplay Logic
+    - Trigger System
+    - NPC Behaviour
+    - Event System
+    - Story Progression
+
+# ==========================================================
+# PORTFOLIO DISPLAY
+# ==========================================================
+
+display:
+
+  order: 6
+
+  showOnHome: false
+
+  showInFeatured: false
+
+  showTimeline: true
+
+# ==========================================================
+# CALL TO ACTION
+# ==========================================================
+
+cta:
+
+  title: Play BENEATH THE MASK
+
+  description: Experience our Global Game Jam 2026 submission and explore the gameplay systems developed during the jam.
+
+  primary:
+
+    text: Play on itch.io
+
+    url: https://abikarthick.itch.io/beneath-the-mask
+
+  secondary:
+
+    text: View Source Code
+
+    url: https://github.com/ABIKARTHICKGDEV/GGJ26-BENEATH-THE-MASK
