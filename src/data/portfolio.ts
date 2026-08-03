@@ -393,6 +393,232 @@ export const portfolio: PortfolioConfig = {
 },
 },
     {
+      id: "starstuff",
+      title: "Star Stuff",
+      category: "2.5D Space Shooter",
+      description:
+        "Star Stuff is a 2.5D space shooter prototype developed in Unreal Engine 5. Inspired by classic arcade and PS2-era space shooters, the project serves as my first Unreal Engine gameplay prototype. Built entirely with Blueprints, it focuses on learning gameplay architecture, enemy AI, projectile systems, spawning mechanics, and Unreal Engine workflows. The project is fully playable and remains under active development, with future updates planned using C++ to improve scalability and architecture.",
+
+      tags: ["unreal", "3d", "blueprint", "in-development"],
+
+      tech: [
+        "Unreal Engine 5.6",
+        "Blueprint Visual Scripting",
+        "Unreal Physics",
+        "UMG (UI)",
+        "Blueprint AI",
+        "Unreal Audio",
+        "Unreal Engine Renderer",
+      ],
+
+      features: [
+        "2.5D Space Shooter Gameplay",
+        "Planet-Based Arena",
+        "Twin-Stick Style Controls",
+        "Enemy AI",
+        "Projectile Combat",
+        "Enemy Wave Spawning",
+        "Blueprint Gameplay Framework",
+        "Playable Prototype",
+      ],
+
+      gameplay: [
+        {
+          title: "2.5D Space Shooter Gameplay",
+          description:
+            "A classic arcade-inspired space shooter presented in a 2.5D perspective. Players pilot a spaceship around a planet arena, engaging enemies in fast-paced projectile combat with twin-stick style controls — blending the feel of PS2-era shooters with Unreal Engine 5 visuals.",
+          image: "Project_Assets/Starstuff/Images/Screenshot-1.png",
+        },
+        {
+          title: "Planet-Based Arena",
+          description:
+            "Gameplay takes place around a spherical planet that acts as the central arena. The planet system (BP_Planet) was built using Unreal's UserConstructionScript, allowing procedural setup of the environment and providing a dynamic circular battlefield for enemy encounters.",
+          image: "Project_Assets/Starstuff/Images/Screenshot-2.png",
+        },
+        {
+          title: "Twin-Stick Style Controls",
+          description:
+            "The player ship uses WASD movement with mouse-aimed shooting, replicating the twin-stick shooter feel. The player Blueprint (BP_Player) handles input, movement, aiming, and firing through a fully Blueprint-driven event graph.",
+          image: "Project_Assets/Starstuff/Images/Screenshot-1.png",
+        },
+        {
+          title: "Enemy AI — Chaser",
+          description:
+            "The Chaser enemy (BP_Enemy_Chaser) relentlessly pursues the player. Its HandleMovement Blueprint graph calculates direction to the player each frame and drives the enemy directly toward them, creating aggressive pressure and forcing constant movement.",
+          image: "Project_Assets/Starstuff/Blueprints/BP_Enemy_Chaser-HandleMovement.png",
+        },
+        {
+          title: "Enemy AI — Shooter",
+          description:
+            "The Shooter enemy (BP_Enemy_Shooter) maintains distance and fires projectiles at the player. Its HandleMovement Blueprint governs positioning logic while the base event graph manages firing intervals and projectile spawning.",
+          image: "Project_Assets/Starstuff/Blueprints/BP_Enemy_Shooter-HandleMovement.png",
+        },
+        {
+          title: "Enemy AI — Tanker",
+          description:
+            "The Tanker enemy (BP_Enemy_Tanker) is a high-health, slower-moving enemy that advances steadily toward the player. Its HandleMovement Blueprint drives a deliberate forward push, designed to absorb damage while forcing the player to commit shots.",
+          image: "Project_Assets/Starstuff/Blueprints/BP_Enemy_Tanker-HandleMovement.png",
+        },
+        {
+          title: "Projectile System",
+          description:
+            "Both player and enemy projectiles are implemented using dedicated Blueprint Actors (TwinStickProjectile and BP_EnemyProjectile). Each projectile handles its own movement, collision detection, and impact logic through Blueprint event graphs.",
+          image: "Project_Assets/Starstuff/Blueprints/BP_EnemyProjectile-EventGraph.png",
+        },
+        {
+          title: "Enemy Wave Spawning",
+          description:
+            "The Enemy Spawner (BP_EnemySpawner) uses a ring spawn pattern to place enemies at defined positions around the player. The RingSpawnEnemy Blueprint function manages spawn locations, enemy type selection, and wave timing.",
+          image: "Project_Assets/Starstuff/Blueprints/BP_EnemySpawner-RingSpawnEnemy.png",
+        },
+      ],
+
+      systems: [
+        {
+          title: "Player Controller",
+          description:
+            "Handles WASD movement, mouse aiming, and projectile firing — all implemented through the BP_Player Blueprint event graph.",
+        },
+        {
+          title: "Enemy AI",
+          description:
+            "Three distinct enemy types (Chaser, Shooter, Tanker) each with unique HandleMovement logic implemented in Blueprint.",
+        },
+        {
+          title: "Projectile System",
+          description:
+            "Separate Blueprint Actors for player (TwinStickProjectile) and enemy (BP_EnemyProjectile) projectiles, each handling movement, collision, and destruction.",
+        },
+        {
+          title: "Enemy Spawner",
+          description:
+            "BP_EnemySpawner drives ring-based enemy spawning with configurable wave timing and enemy type selection.",
+        },
+        {
+          title: "Planet System",
+          description:
+            "BP_Planet uses Unreal's UserConstructionScript for procedural environment setup, forming the circular arena for gameplay.",
+        },
+        {
+          title: "Camera System",
+          description:
+            "A Blueprint-driven camera tracks the player across the arena, maintaining a clear 2.5D view of the action.",
+        },
+        {
+          title: "Blueprint Gameplay Framework",
+          description:
+            "All systems are wired through Blueprint event graphs, custom events, and function calls — no C++ required in this prototype.",
+        },
+      ],
+
+      architectureModules: [
+        "Player",
+        "Planet",
+        "Enemy AI",
+        "Projectile",
+        "Enemy Spawner",
+        "Camera",
+        "Blueprint Gameplay Framework",
+      ],
+
+      projectImpact: {
+        problem:
+          "Build my first Unreal Engine gameplay prototype from scratch — learning gameplay architecture, enemy AI, projectile systems, spawning mechanics, and Blueprint workflows in a real, playable project.",
+        solution:
+          "Developed a fully playable 2.5D space shooter using only Blueprint Visual Scripting. Implemented a twin-stick player controller, three distinct enemy AI types, a projectile system, a ring-based wave spawner, and a planet arena — all wired through Blueprint event graphs across 9+ Blueprint Actors.",
+      },
+
+      metrics: {
+        type: "Space Shooter",
+        platform: "Windows",
+        engine: "Unreal Engine 5.6",
+        language: "Blueprint (Future C++)",
+        teamSize: "Solo",
+        devTime: "May 2025 – Present",
+        status: "In Development",
+      },
+
+      challenges: [
+        {
+          challenge: "Learning Unreal Engine architecture from scratch.",
+          solution:
+            "Systematically built each gameplay system — player, enemies, projectiles, spawner — incrementally through Blueprint, referencing Unreal documentation and studying the Actor lifecycle.",
+        },
+        {
+          challenge: "Designing a planet-based movement system.",
+          solution:
+            "Used Unreal's UserConstructionScript in BP_Planet to procedurally set up the arena environment, providing a circular battlefield that drives player and enemy positioning.",
+        },
+        {
+          challenge: "Implementing multiple distinct enemy behaviours.",
+          solution:
+            "Separated each enemy type into its own Blueprint class (Chaser, Shooter, Tanker) with dedicated HandleMovement logic, inheriting shared behaviour from BP_Enemy_Base for maintainability.",
+        },
+        {
+          challenge: "Building gameplay entirely with Blueprints.",
+          solution:
+            "Leveraged Blueprint's full event system, custom events, functions, and dispatchers to replicate architecture patterns typically implemented in C++ — serving as a strong foundation for a future C++ migration.",
+        },
+        {
+          challenge: "Understanding Unreal gameplay workflow.",
+          solution:
+            "Worked through the Unreal gameplay framework hands-on, learning Actor spawning, input handling, event-driven communication, and Blueprint graph organisation through building this prototype.",
+        },
+      ],
+
+      learnings: [
+        "Unreal Gameplay Framework",
+        "Blueprint Architecture",
+        "Actor Communication",
+        "Enemy AI Design",
+        "Projectile Systems",
+        "Gameplay Organisation",
+        "Unreal Development Workflow",
+        "Event-Driven Programming",
+        "Prototype to Production Thinking",
+      ],
+
+      gallery: {
+        gameplay: [
+          "Project_Assets/Starstuff/Gameplay.mp4",
+          "Project_Assets/Starstuff/Images/Screenshot-1.png",
+          "Project_Assets/Starstuff/Images/Screenshot-2.png",
+        ],
+        development: [],
+        editor: [],
+      },
+
+      blueprintGallery: {
+        title: "Blueprint Implementation",
+        description:
+          "Blueprint event graphs showcasing the player controller, enemy AI behaviours, projectile systems, and wave spawner — all implemented in Unreal Engine 5.6 using Blueprint Visual Scripting.",
+        images: [
+          "Project_Assets/Starstuff/Blueprints/BP_Player-EventGraph.png",
+          "Project_Assets/Starstuff/Blueprints/BP_Enemy_Base-EventGraph.png",
+          "Project_Assets/Starstuff/Blueprints/BP_Enemy_Chaser-HandleMovement.png",
+          "Project_Assets/Starstuff/Blueprints/BP_Enemy_Shooter-HandleMovement.png",
+          "Project_Assets/Starstuff/Blueprints/BP_Enemy_Tanker-HandleMovement.png",
+          "Project_Assets/Starstuff/Blueprints/BP_EnemyProjectile-EventGraph.png",
+          "Project_Assets/Starstuff/Blueprints/BP_EnemySpawner-RingSpawnEnemy.png",
+          "Project_Assets/Starstuff/Blueprints/BP_Planet-UserConstructionScript.png",
+          "Project_Assets/Starstuff/Blueprints/TwinStickProjectile-EventGraph.png",
+        ],
+      },
+
+      links: {
+        github: "https://github.com/ABIKARTHICKGDEV/StarStuff",
+        linkedin:
+          "https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-gamedevelopment-activity-7490080303089111041-YyFT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U",
+      },
+
+      media: {
+        banner: "Project_Assets/Starstuff/Images/Thumbnail.png",
+        screenshot: "Project_Assets/Starstuff/Images/Screenshot-1.png",
+        hoverVideo: "Project_Assets/Starstuff/Hovervideo.mp4",
+        video: "Project_Assets/Starstuff/Gameplay.mp4",
+      },
+    },
+    {
       id: "charge-collector",
       title: "Charge Collector",
       category: "3D Endless Runner",
@@ -1477,49 +1703,6 @@ export const portfolio: PortfolioConfig = {
         hoverVideo: "Project_Assets/Flappy Bird/GamePlay_hover.mp4",
         video: "Project_Assets/Flappy Bird/GamePlay.mp4",
       },
-    },
-    {
-      id: "starstuff",
-      title: "StarStuff",
-      category: "3D Twin-Stick Shooter",
-      description:
-        "An original sci-fi twin-stick shooter built in Unreal Engine 5. Featuring spherical planet gameplay, enemy AI, weapon systems, and arcade-inspired combat.",
-      tags: ["Unreal", "3d", "in-development"],
-      tech: ["Unreal", "C++", "Blueprint", "Diversion"],
-      features: [
-        "Custom 2D physics interactions",
-        "Hand-crafted puzzle levels",
-        "Modular gameplay systems",
-        "Iterative playtesting loop",
-      ],
-      projectImpact: {
-        problem: "Design an original puzzle platformer that teaches mechanics without text.",
-        solution:
-          "Built modular physics primitives the player learns through play, with level layout driving discovery.",
-      },
-      metrics: {
-        type: "2D Puzzle Platformer",
-        platform: "PC",
-        engine: "Unity",
-        language: "C#",
-        teamSize: "Solo",
-        devTime: "Ongoing",
-        status: "In Development",
-      },
-      challenges: [
-        {
-          challenge: "Reliable 2D physics behaviour across framerates.",
-          solution: "FixedUpdate-driven physics step with interpolated visuals.",
-        },
-      ],
-      learnings: ["Custom Physics", "Level Design", "Iterative Playtesting"],
-      gallery: { gameplay: [], development: [], editor: [] },
-     links: {
-    itch: "https://abikarthick.itch.io/bros-jump",
-    github: "https://github.com/ABIKARTHICKGDEV/Bros-Jump-Unity",
-    linkedin: "https://www.linkedin.com/posts/abikarthick_unity-unity3d-gamedevelopment-ugcPost-7477652910747774976-o44n/"
-  },  
-      
     },
   ],
   showcase: {

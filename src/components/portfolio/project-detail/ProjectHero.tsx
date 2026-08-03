@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { asset } from "@/lib/asset";
-import { Play, Pause, Github, Linkedin, Volume2, VolumeX } from "lucide-react";
+import { Play, Pause, Github, Linkedin, Volume2, VolumeX, Construction } from "lucide-react";
 
 export default function ProjectHero({ project }: { project: any }) {
   const bgVideo = project.media?.video;
@@ -106,26 +106,36 @@ export default function ProjectHero({ project }: { project: any }) {
           <h1 className="mt-3 font-display text-5xl font-extrabold leading-tight">
             {project.title}
           </h1>
+
+          {project.metrics?.status === "In Development" && (
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-1.5 text-sm font-semibold text-amber-400">
+              <Construction className="h-4 w-4" />
+              Currently in Active Development
+            </div>
+          )}
+
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">{project.description}</p>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            {project.links?.itchEmbedUrl ? (
-              <a href="#play" className="btn-steam inline-flex items-center gap-2 px-4 py-2">
-                <Play className="h-4 w-4" /> Play Game
-              </a>
-            ) : project.links?.itch ? (
-              <a
-                href={project.links.itch}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-steam inline-flex items-center gap-2 px-4 py-2"
-              >
-                <Play className="h-4 w-4" /> Play Game
-              </a>
-            ) : (
-              <button className="btn-steam inline-flex items-center gap-2 px-4 py-2" disabled>
-                <Play className="h-4 w-4" /> Play Game
-              </button>
+            {project.metrics?.status !== "In Development" && (
+              project.links?.itchEmbedUrl ? (
+                <a href="#play" className="btn-steam inline-flex items-center gap-2 px-4 py-2">
+                  <Play className="h-4 w-4" /> Play Game
+                </a>
+              ) : project.links?.itch ? (
+                <a
+                  href={project.links.itch}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-steam inline-flex items-center gap-2 px-4 py-2"
+                >
+                  <Play className="h-4 w-4" /> Play Game
+                </a>
+              ) : (
+                <button className="btn-steam inline-flex items-center gap-2 px-4 py-2" disabled>
+                  <Play className="h-4 w-4" /> Play Game
+                </button>
+              )
             )}
 
             {project.links?.github ? (

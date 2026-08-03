@@ -1,0 +1,403 @@
+type: project
+
+# ==========================================================
+# BASIC INFORMATION
+# ==========================================================
+
+id: starstuff
+
+slug: starstuff
+
+title: Star Stuff
+
+subtitle: 2.5D Space Shooter Prototype
+
+description: >
+  Star Stuff is a 2.5D space shooter prototype developed in Unreal Engine 5.
+  Inspired by classic arcade and PS2-era space shooters, the project serves as
+  my first Unreal Engine gameplay prototype. Built entirely with Blueprints,
+  it focuses on learning gameplay architecture, enemy AI, projectile systems,
+  spawning mechanics, and Unreal Engine workflows. The project is fully playable
+  and remains under active development, with future updates planned using C++
+  to improve scalability and architecture.
+
+shortDescription: >
+  A Blueprint-based 2.5D space shooter prototype built in Unreal Engine 5.
+  Currently playable and actively evolving with future C++ gameplay systems.
+
+featured: false
+
+status: In Development
+
+visibility: public
+
+category: Game
+
+genre: Space Shooter
+
+created: May 2025
+
+lastUpdated: August 2026
+
+version: Prototype v1.0
+
+engine: Unreal Engine
+
+engineVersion: 5.6
+
+language: Blueprint (Future C++)
+
+platforms:
+  - Windows
+
+developmentTime: May 2025 – Present
+
+teamSize: 1
+
+role: Solo Developer
+
+difficulty:
+
+parentProject:
+
+# ==========================================================
+# LINKS
+# ==========================================================
+
+links:
+
+  play:
+
+  github: https://github.com/ABIKARTHICKGDEV/StarStuff
+
+  portfolio:
+
+  itch:
+
+  linkedin: https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-gamedevelopment-activity-7490080303089111041-YyFT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U
+
+  documentation:
+
+  youtube:
+
+  devlog:
+
+  download:
+
+# ==========================================================
+# MEDIA
+# ==========================================================
+
+media:
+
+  thumbnail: /Project_Assets/Starstuff/Images/Thumbnail.png
+
+  cardImage: /Project_Assets/Starstuff/Images/Thumbnail.png
+
+  banner: /Project_Assets/Starstuff/Images/Thumbnail.png
+
+  heroImage: /Project_Assets/Starstuff/Images/Thumbnail.png
+
+  icon: /Project_Assets/Starstuff/Images/Thumbnail.png
+
+  videos:
+
+    trailer:
+
+    hoverPreview: /Project_Assets/Starstuff/Hovervideo.mp4
+
+    gameplay: /Project_Assets/Starstuff/Gameplay.mp4
+
+    teaser:
+
+  gallery:
+
+    - image: /Project_Assets/Starstuff/Images/Screenshot-1.png
+
+    - image: /Project_Assets/Starstuff/Images/Screenshot-2.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_Player-EventGraph.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_Enemy_Base-EventGraph.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_Enemy_Chaser-HandleMovement.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_Enemy_Shooter-HandleMovement.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_Enemy_Tanker-HandleMovement.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_EnemyProjectile-EventGraph.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_EnemySpawner-RingSpawnEnemy.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/BP_Planet-UserConstructionScript.png
+
+    - image: /Project_Assets/Starstuff/Blueprints/TwinStickProjectile-EventGraph.png
+
+# ==========================================================
+# TAGS
+# ==========================================================
+
+tags:
+
+  - Unreal Engine 5
+
+  - Blueprint
+
+  - C++
+
+  - Space Shooter
+
+  - 2.5D
+
+  - Gameplay Prototype
+
+  - Enemy AI
+
+  - Twin Stick Shooter
+
+  - Projectile System
+
+  - Planet Gameplay
+
+  - Solo Project
+
+# ==========================================================
+# FEATURES
+# ==========================================================
+
+features:
+
+  - 2.5D Space Shooter Gameplay
+
+  - Planet-Based Arena
+
+  - Twin-Stick Style Controls
+
+  - Enemy AI
+
+  - Projectile Combat
+
+  - Enemy Wave Spawning
+
+  - Blueprint Gameplay Framework
+
+  - Playable Prototype
+
+# ==========================================================
+# GAMEPLAY
+# ==========================================================
+
+gameplay:
+
+  objective: >
+    Survive enemy waves while navigating around the planet and destroying hostile enemies.
+
+  controls:
+
+    keyboard: WASD
+
+    mouse: Aim & Shoot
+
+    gamepad:
+
+    mobile:
+
+  winCondition: Survive enemy encounters and eliminate hostile units.
+
+  loseCondition: Player spaceship is destroyed.
+
+# ==========================================================
+# SYSTEMS
+# ==========================================================
+
+systems:
+
+  - Player Controller
+
+  - Enemy AI
+
+  - Projectile System
+
+  - Enemy Spawner
+
+  - Planet System
+
+  - Camera System
+
+  - Blueprint Gameplay Framework
+
+# ==========================================================
+# TECH STACK
+# ==========================================================
+
+techStack:
+
+  engine: Unreal Engine 5.6
+
+  language: Blueprint (Future C++)
+
+  physics: Unreal Physics
+
+  ui: Unreal UMG
+
+  networking: None
+
+  ai: Blueprint AI
+
+  audio: Unreal Audio
+
+  rendering: Unreal Engine Renderer
+
+# ==========================================================
+# SOURCE CODE
+# ==========================================================
+
+sourceCode:
+
+  repository: Public
+
+  scripts: Blueprint
+
+  totalScripts: 9+
+
+# ==========================================================
+# CHALLENGES
+# ==========================================================
+
+challenges:
+
+  - Learning Unreal Engine architecture from scratch
+
+  - Designing a planet-based movement system
+
+  - Implementing multiple enemy behaviours
+
+  - Building gameplay entirely with Blueprints
+
+  - Understanding Unreal gameplay workflow
+
+# ==========================================================
+# LESSONS LEARNED
+# ==========================================================
+
+lessonsLearned:
+
+  - Unreal Gameplay Framework
+
+  - Blueprint Architecture
+
+  - Actor Communication
+
+  - Enemy Behaviour
+
+  - Projectile Systems
+
+  - Gameplay Organization
+
+  - Unreal Development Workflow
+
+# ==========================================================
+# METRICS
+# ==========================================================
+
+metrics:
+
+  created: May 2025
+
+  completed:
+
+  updated: August 2026
+
+  commits:
+
+  scenes: 1
+
+  prefabs:
+
+  scripts: 9+
+
+  codeLines:
+
+# ==========================================================
+# TIMELINE
+# ==========================================================
+
+timeline:
+
+  - May 2025 — Project Started
+
+  - Built Core Gameplay Systems
+
+  - Implemented Player Controller
+
+  - Developed Enemy AI
+
+  - Added Projectile Systems
+
+  - Built Enemy Spawner
+
+  - Achieved Fully Playable Prototype
+
+  - Ongoing Blueprint Improvements
+
+  - Future C++ Migration
+
+# ==========================================================
+# ARCHITECTURE
+# ==========================================================
+
+architecture:
+
+  image:
+
+  modules:
+
+    - Player
+
+    - Planet
+
+    - Enemy AI
+
+    - Projectile
+
+    - Enemy Spawner
+
+    - Camera
+
+# ==========================================================
+# PORTFOLIO DISPLAY
+# ==========================================================
+
+display:
+
+  order: 999
+
+  showOnHome: false
+
+  showInFeatured: false
+
+  showTimeline: true
+
+# ==========================================================
+# CALL TO ACTION
+# ==========================================================
+
+cta:
+
+  title: Explore the Project
+
+  description: >
+    View the source code and follow the ongoing development journey of Star Stuff.
+
+  primary:
+
+    text: GitHub Repository
+
+    url: https://github.com/ABIKARTHICKGDEV/StarStuff
+
+  secondary:
+
+    text: LinkedIn Post
+
+    url: https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-gamedevelopment-activity-7490080303089111041-YyFT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U
