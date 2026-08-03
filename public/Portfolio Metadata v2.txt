@@ -1,0 +1,282 @@
+# ==========================================================
+# PORTFOLIO METADATA v2
+# Compatible with:
+# - Projects
+# - Mechanics
+# - Tools
+# - Plugins
+# - Systems
+# ==========================================================
+
+type: project                 # project | mechanic | tool | plugin | system
+
+# ==========================================================
+# BASIC INFORMATION
+# ==========================================================
+
+id:
+
+slug:
+
+title:
+
+subtitle:
+
+description:
+
+shortDescription:
+
+featured: false
+
+status:                       # Prototype | In Development | Completed | Archived
+
+visibility: public            # public | private
+
+category:                     # Game | Mechanic | Tool | Plugin | System
+
+genre:
+
+created:
+
+lastUpdated:
+
+version:
+
+engine:
+
+engineVersion:
+
+language:
+
+platforms:
+  - Windows
+  - Android
+  - WebGL
+
+developmentTime:
+
+teamSize:
+
+role:
+
+difficulty:                   # mechanic only
+
+parentProject:                # mechanic only
+
+# ==========================================================
+# LINKS
+# ==========================================================
+
+links:
+
+  play:
+
+  github:
+
+  portfolio:
+
+  itch:
+
+  linkedin:
+
+  documentation:
+
+  youtube:
+
+  devlog:
+
+  download:
+
+# ==========================================================
+# MEDIA
+# ==========================================================
+
+media:
+
+  thumbnail:
+
+  cardImage:
+
+  banner:
+
+  heroImage:
+
+  icon:
+
+  videos:
+
+    trailer:
+
+    hoverPreview:
+
+    gameplay:
+
+    teaser:
+
+  gallery:
+
+    - image:
+
+    - image:
+
+    - image:
+
+# ==========================================================
+# TAGS
+# ==========================================================
+
+tags:
+
+# ==========================================================
+# FEATURES
+# ==========================================================
+
+features:
+
+# ==========================================================
+# GAMEPLAY
+# ==========================================================
+
+gameplay:
+
+  objective:
+
+  controls:
+
+    keyboard:
+
+    mouse:
+
+    gamepad:
+
+    mobile:
+
+  winCondition:
+
+  loseCondition:
+
+# ==========================================================
+# SYSTEMS
+# ==========================================================
+
+systems:
+
+# ==========================================================
+# TECH STACK
+# ==========================================================
+
+techStack:
+
+  engine:
+
+  language:
+
+  physics:
+
+  ui:
+
+  networking:
+
+  ai:
+
+  audio:
+
+  rendering:
+
+# ==========================================================
+# SOURCE CODE
+# ==========================================================
+
+sourceCode:
+
+  repository:
+
+  scripts:
+
+  totalScripts:
+
+# ==========================================================
+# CHALLENGES
+# ==========================================================
+
+challenges:
+
+# ==========================================================
+# LESSONS LEARNED
+# ==========================================================
+
+lessonsLearned:
+
+# ==========================================================
+# METRICS
+# ==========================================================
+
+metrics:
+
+  created:
+
+  completed:
+
+  updated:
+
+  commits:
+
+  scenes:
+
+  prefabs:
+
+  scripts:
+
+  codeLines:
+
+# ==========================================================
+# TIMELINE
+# ==========================================================
+
+timeline:
+
+# ==========================================================
+# ARCHITECTURE
+# ==========================================================
+
+architecture:
+
+  image:
+
+  modules:
+
+# ==========================================================
+# PORTFOLIO DISPLAY
+# ==========================================================
+
+display:
+
+  order:
+
+  showOnHome: false
+
+  showInFeatured: false
+
+  showTimeline: true
+
+# ==========================================================
+# CALL TO ACTION
+# ==========================================================
+
+cta:
+
+  title:
+
+  description:
+
+  primary:
+
+    text:
+
+    url:
+
+  secondary:
+
+    text:
+
+    url:

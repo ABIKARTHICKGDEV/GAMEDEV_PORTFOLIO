@@ -640,6 +640,237 @@ export const portfolio: PortfolioConfig = {
       },
     },
     {
+      id: "ethernal-check-prototype",
+      title: "Ethernal Check Prototype",
+      category: "Turn-Based Strategy",
+      description:
+        "Ethernal Check Prototype is my first Unreal Engine 5 project, developed as a learning-focused prototype to understand gameplay programming using C++ and Blueprints. The project features a grid-based turn-based strategy system with custom gameplay architecture, camera controls, unit management, and modular gameplay systems. Although it was never released as a complete game, it successfully achieved its goal of helping me master Unreal Engine fundamentals, C++ programming, Blueprint integration, and Unreal's gameplay framework.",
+
+      tags: ["unreal", "3d", "blueprint"],
+
+      tech: [
+        "Unreal Engine 5.6",
+        "C++",
+        "Blueprint Visual Scripting",
+        "Unreal Physics",
+        "UMG (UI)",
+        "Unreal Audio",
+        "Unreal Engine Renderer",
+      ],
+
+      features: [
+        "Turn-Based Gameplay",
+        "Grid Manager",
+        "Tile Selection",
+        "Camera Pawn",
+        "Unit System",
+        "Turn Manager",
+        "Game Controller",
+        "Blueprint Integration",
+        "Event Driven Programming",
+        "Data Assets",
+      ],
+
+      gameplay: [
+        {
+          title: "Turn-Based Gameplay",
+          description:
+            "A tactical chess-inspired system where players take alternating turns to move and command units on a grid. Each turn, the active player selects a unit, views valid moves, and executes their action before control transfers to the opponent.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-1.png",
+        },
+        {
+          title: "Grid Manager",
+          description:
+            "A custom grid system built in C++ that generates and manages the entire board layout. The Grid Manager handles tile initialization, coordinate mapping, pathfinding queries, and visual feedback for valid move highlighting.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-2.png",
+        },
+        {
+          title: "Tile Selection System",
+          description:
+            "Players interact with the board through a mouse-driven tile selection system. Clicking a unit highlights all valid movement tiles, and clicking a highlighted tile issues the move command — providing clear, intuitive feedback.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-3.png",
+        },
+        {
+          title: "Camera Pawn",
+          description:
+            "A custom Camera Pawn (BP_CameraPawn) provides smooth, controlled board navigation using WASD movement and mouse input. The camera is designed to give the player a comfortable strategic overview of the entire grid.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-4.png",
+        },
+        {
+          title: "Unit System",
+          description:
+            "Each game piece is implemented as a BP_BaseUnit Actor with individual stats, movement rules, and state tracking. Units respond to selection, movement commands, and combat interactions through a modular component design.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-5.png",
+        },
+        {
+          title: "Turn Manager",
+          description:
+            "The BP_TurnManager governs the flow of the game — switching active players, validating legal actions, tracking win/lose conditions, and broadcasting state changes through Blueprint event dispatchers.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-6.png",
+        },
+        {
+          title: "Game Controller & Blueprint Integration",
+          description:
+            "The GameController Blueprint ties together all major systems — grid, units, turns, and UI — acting as the central event hub. C++ classes expose functionality to Blueprints via exposed properties and UFUNCTION bindings.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-7.png",
+        },
+        {
+          title: "Event-Driven Architecture & Data Assets",
+          description:
+            "Gameplay events are propagated using Unreal's delegate and event dispatcher system, keeping systems decoupled and maintainable. Data Assets store unit configuration, allowing designers to tweak stats without touching code.",
+          image: "Project_Assets/EthernalCheck/Images/screenshot-1.png",
+        },
+      ],
+
+      systems: [
+        {
+          title: "Grid Management",
+          description:
+            "C++ system that generates the board grid, manages tile states, and provides valid-move queries to other systems.",
+        },
+        {
+          title: "Unit Management",
+          description:
+            "Manages all game units including selection, movement validation, combat resolution, and state updates.",
+        },
+        {
+          title: "Turn Management",
+          description:
+            "Controls player turn flow, enforces legal actions, and evaluates win/lose conditions via event dispatchers.",
+        },
+        {
+          title: "Camera Controller",
+          description:
+            "Custom Camera Pawn with WASD and mouse-driven navigation for a smooth strategic board overview.",
+        },
+        {
+          title: "Blueprint Event System",
+          description:
+            "All gameplay state changes are broadcast through Blueprint event dispatchers, keeping systems loosely coupled.",
+        },
+        {
+          title: "Data Asset Configuration",
+          description:
+            "Unit stats and properties are stored in Unreal Data Assets, enabling designer-friendly configuration without code changes.",
+        },
+      ],
+
+      architectureModules: [
+        "Grid Manager",
+        "Turn Manager",
+        "Unit System",
+        "Camera Pawn",
+        "Game Controller",
+        "Blueprint Event System",
+        "Data Assets",
+        "UI Manager",
+      ],
+
+      projectImpact: {
+        problem:
+          "Learn Unreal Engine 5 architecture, C++ gameplay programming, and Blueprint integration by building a complete grid-based turn-based strategy prototype from scratch.",
+        solution:
+          "Developed a fully functional chess-inspired prototype featuring a custom Grid Manager, Unit System, Camera Pawn, Turn Manager, and Game Controller — all implemented using C++ with Blueprint integration, event-driven architecture, and Data Assets across 3 months of focused learning.",
+      },
+
+      metrics: {
+        type: "Turn-Based Strategy",
+        platform: "Windows",
+        engine: "Unreal Engine 5.6",
+        language: "C++",
+        teamSize: "Solo",
+        devTime: "3 Months (Dec 2025 – Mar 2026)",
+        status: "Prototype",
+      },
+
+      challenges: [
+        {
+          challenge: "Learning Unreal Engine architecture from scratch.",
+          solution:
+            "Systematically studied the UObject hierarchy, Actor lifecycle, and Gameplay Framework by building each system incrementally and referencing official Unreal documentation.",
+        },
+        {
+          challenge: "Building gameplay systems with C++ in Unreal Engine.",
+          solution:
+            "Implemented core systems — Grid Manager, Unit System, and Turn Manager — in C++, exposing key properties and functions to Blueprints via UPROPERTY and UFUNCTION macros.",
+        },
+        {
+          challenge: "Bridging Blueprint and C++ communication.",
+          solution:
+            "Used Unreal's delegate and event dispatcher system to enable clean, decoupled communication between C++ classes and Blueprint graphs without tight coupling.",
+        },
+        {
+          challenge: "Designing an event-driven gameplay flow.",
+          solution:
+            "Structured all gameplay state transitions through custom events and dispatchers, keeping systems independent and making the architecture scalable for future extension.",
+        },
+        {
+          challenge: "Understanding UObject hierarchy and memory management.",
+          solution:
+            "Learned Unreal's garbage collection model, properly used TObjectPtr and UPROPERTY for safe references, and studied Actor ownership patterns to avoid memory issues.",
+        },
+      ],
+
+      learnings: [
+        "Unreal Engine Architecture",
+        "UObject Hierarchy",
+        "Gameplay Framework",
+        "Actors & Components",
+        "Delegates & Events",
+        "Data Assets",
+        "C++ Fundamentals",
+        "Object-Oriented Programming",
+        "Blueprint Integration",
+        "Event-Driven Gameplay",
+      ],
+
+      gallery: {
+        gameplay: [
+          "Project_Assets/EthernalCheck/Gameplay.mp4",
+          "Project_Assets/EthernalCheck/Images/screenshot-1.png",
+          "Project_Assets/EthernalCheck/Images/screenshot-2.png",
+          "Project_Assets/EthernalCheck/Images/screenshot-3.png",
+          "Project_Assets/EthernalCheck/Images/screenshot-4.png",
+          "Project_Assets/EthernalCheck/Images/screenshot-5.png",
+          "Project_Assets/EthernalCheck/Images/screenshot-6.png",
+          "Project_Assets/EthernalCheck/Images/screenshot-7.png",
+        ],
+        development: [],
+        editor: [],
+      },
+
+      blueprintGallery: {
+        title: "Blueprint & C++ Implementation",
+        description:
+          "Blueprint event graphs showcasing the gameplay architecture, unit system, grid management, and turn-based flow implemented using C++ and Blueprints in Unreal Engine 5.6.",
+        images: [
+          "Project_Assets/EthernalCheck/Blueprints/BP_BaseUnit-EventGraph.png",
+          "Project_Assets/EthernalCheck/Blueprints/BP_CameraPawn-EventGraph.png",
+          "Project_Assets/EthernalCheck/Blueprints/BP_GridManager-EventGraph.png",
+          "Project_Assets/EthernalCheck/Blueprints/BP_TurnManager-EventGraph.png",
+          "Project_Assets/EthernalCheck/Blueprints/GameController-EventGraph.png",
+        ],
+      },
+
+      documentation: {
+        title: "Game Design Document",
+        pdf: "Project_Assets/EthernalCheck/Documentation/GDD.pdf",
+      },
+
+      links: {
+        github: "https://github.com/ABIKARTHICKGDEV/Ethernal-check-prototype",
+        linkedin:
+          "https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-cpp-ugcPost-7490040464524378112-_zhz/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U",
+      },
+
+      media: {
+        banner: "Project_Assets/EthernalCheck/Images/Thumbnail.png",
+        screenshot: "Project_Assets/EthernalCheck/Images/screenshot-1.png",
+        hoverVideo: "Project_Assets/EthernalCheck/Hover_Video.mp4",
+        video: "Project_Assets/EthernalCheck/Gameplay.mp4",
+      },
+    },
+    {
       id: "cat-endless-runner-unreal",
       title: "Cat Endless Runner",
       category: "3D Endless Runner",

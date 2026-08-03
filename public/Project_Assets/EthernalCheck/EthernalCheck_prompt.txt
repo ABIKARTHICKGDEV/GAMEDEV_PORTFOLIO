@@ -1,0 +1,406 @@
+type: project
+
+# ==========================================================
+# BASIC INFORMATION
+# ==========================================================
+
+id: ethernal-check-prototype
+
+slug: ethernal-check-prototype
+
+title: Ethernal Check Prototype
+
+subtitle: First Unreal Engine 5 Turn-Based Strategy Prototype
+
+description: >
+  Ethernal Check Prototype is my first Unreal Engine 5 project, developed as a
+  learning-focused prototype to understand gameplay programming using C++ and
+  Blueprints. The project features a grid-based turn-based strategy system with
+  custom gameplay architecture, camera controls, unit management, and modular
+  gameplay systems. Although it was never released as a complete game, it
+  successfully achieved its goal of helping me master Unreal Engine fundamentals,
+  C++ programming, Blueprint integration, and Unreal's gameplay framework.
+
+shortDescription: >
+  My first Unreal Engine 5 C++ prototype featuring grid-based gameplay,
+  Blueprints, gameplay architecture, and turn-based mechanics.
+
+featured: false
+
+status: Prototype
+
+visibility: public
+
+category: Game
+
+genre: Turn-Based Strategy
+
+created: "2025-12"
+
+lastUpdated: "2026-03-15"
+
+version: Prototype v1.0
+
+engine: Unreal Engine
+
+engineVersion: "5.6"
+
+language: C++
+
+platforms:
+  - Windows
+
+developmentTime: 3 Months
+
+teamSize: 1
+
+role: Solo Game Programmer
+
+# ==========================================================
+# LINKS
+# ==========================================================
+
+links:
+
+  play:
+
+  github: https://github.com/ABIKARTHICKGDEV/Ethernal-check-prototype
+
+  portfolio: https://abikarthickgdev.github.io/GAMEDEV_PORTFOLIO/
+
+  itch:
+
+  linkedin: https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-cpp-ugcPost-7490040464524378112-_zhz/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U
+
+  documentation: Project_Assets/EthernalCheck/Documentation/GDD.pdf
+
+  youtube:
+
+  devlog:
+
+  download:
+
+# ==========================================================
+# MEDIA
+# ==========================================================
+
+media:
+
+  thumbnail: Project_Assets/EthernalCheck/Images/Thumbnail.png
+
+  cardImage: Project_Assets/EthernalCheck/Images/Thumbnail.png
+
+  banner: Project_Assets/EthernalCheck/Images/Thumbnail.png
+
+  heroImage: Project_Assets/EthernalCheck/Images/Thumbnail.png
+
+  icon: Project_Assets/EthernalCheck/Images/Thumbnail.png
+
+  videos:
+
+    trailer:
+
+    hoverPreview: Project_Assets/EthernalCheck/Hover_Video.mp4
+
+    gameplay: Project_Assets/EthernalCheck/Gameplay.mp4
+
+    teaser:
+
+blueprintGallery:
+
+    - image: Project_Assets/EthernalCheck/Blueprints/BP_BaseUnit-EventGraph.png
+      title: Base Unit
+
+    - image: Project_Assets/EthernalCheck/Blueprints/BP_CameraPawn-EventGraph.png
+      title: Camera Pawn
+
+    - image: Project_Assets/EthernalCheck/Blueprints/BP_GridManager-EventGraph.png
+      title: Grid Manager
+
+    - image: Project_Assets/EthernalCheck/Blueprints/BP_TurnManager-EventGraph.png
+      title: Turn Manager
+
+    - image: Project_Assets/EthernalCheck/Blueprints/GameController-EventGraph.png
+      title: Game Controller
+
+  gallery:
+
+    - image: Project_Assets/EthernalCheck/Images/screenshot-1.png
+
+    - image: Project_Assets/EthernalCheck/Images/screenshot-2.png
+
+    - image: Project_Assets/EthernalCheck/Images/screenshot-3.png
+
+    - image: Project_Assets/EthernalCheck/Images/screenshot-4.png
+
+    - image: Project_Assets/EthernalCheck/Images/screenshot-5.png
+
+    - image: Project_Assets/EthernalCheck/Images/screenshot-6.png
+
+    - image: Project_Assets/EthernalCheck/Images/screenshot-7.png
+
+timeline:
+
+  - December 2025 — Started learning Unreal Engine through the Ethernal Check Prototype.
+
+  - January 2026 — Built the core grid system, camera controls, and unit gameplay mechanics.
+
+  - February 2026 — Implemented turn management, gameplay systems, Blueprints, and C++ architecture.
+
+  - 15 March 2026 — Gameplay prototype completed and project concluded as a learning milestone.
+
+# ==========================================================
+# TAGS
+# ==========================================================
+
+tags:
+
+  - Unreal Engine 5
+
+  - C++
+
+  - Blueprints
+
+  - Turn Based
+
+  - Strategy
+
+  - Grid System
+
+  - Gameplay Programming
+
+  - Unreal Framework
+
+# ==========================================================
+# FEATURES
+# ==========================================================
+
+features:
+
+  - Turn-Based Gameplay
+
+  - Grid Manager
+
+  - Tile Selection
+
+  - Camera Pawn
+
+  - Unit System
+
+  - Turn Manager
+
+  - Game Controller
+
+  - Blueprint Integration
+
+  - Event Driven Programming
+
+  - Data Assets
+
+# ==========================================================
+# GAMEPLAY
+# ==========================================================
+
+gameplay:
+
+  objective: Defeat the opponent using tactical grid-based movement and turn-based strategy.
+
+  controls:
+
+    keyboard: WASD, Mouse
+
+    mouse: Selection & Interaction
+
+    gamepad:
+
+    mobile:
+
+  winCondition: Eliminate the opponent's king.
+
+  loseCondition: Lose your king.
+
+# ==========================================================
+# SYSTEMS
+# ==========================================================
+
+systems:
+
+  - Grid Management
+
+  - Unit Management
+
+  - Turn Management
+
+  - Camera Controller
+
+  - Blueprint Event System
+
+  - Data Asset Configuration
+
+# ==========================================================
+# TECH STACK
+# ==========================================================
+
+techStack:
+
+  engine: Unreal Engine 5
+
+  language: C++
+
+  physics: Unreal Physics
+
+  ui: UMG
+
+  networking:
+
+  ai:
+
+  audio: Unreal Audio
+
+  rendering: Unreal Engine Renderer
+
+# ==========================================================
+# SOURCE CODE
+# ==========================================================
+
+sourceCode:
+
+  repository: Public
+
+  scripts: C++
+
+  totalScripts: 20+
+
+# ==========================================================
+# CHALLENGES
+# ==========================================================
+
+challenges:
+
+  - Learning Unreal Engine architecture
+
+  - Understanding UObject hierarchy
+
+  - Building gameplay systems with C++
+
+  - Blueprint and C++ communication
+
+  - Event-driven gameplay
+
+# ==========================================================
+# LESSONS LEARNED
+# ==========================================================
+
+lessonsLearned:
+
+  - Unreal Engine Architecture
+
+  - UObject Hierarchy
+
+  - Gameplay Framework
+
+  - Actors & Components
+
+  - Delegates
+
+  - Events
+
+  - Data Assets
+
+  - C++ Fundamentals
+
+  - Object-Oriented Programming
+
+# ==========================================================
+# METRICS
+# ==========================================================
+
+metrics:
+
+  created: "December 2025"
+
+  completed: "15 March 2026"
+
+  updated: "15 March 2026"
+
+  commits:
+
+  scenes:
+
+  prefabs:
+
+  scripts: 20+
+
+  codeLines:
+
+# ==========================================================
+# TIMELINE
+# ==========================================================
+
+timeline:
+
+  - December 2025 — Project Started
+
+  - January 2026 — Grid Gameplay
+
+  - February 2026 — Gameplay Systems
+
+  - March 2026 — Prototype Completed
+
+# ==========================================================
+# ARCHITECTURE
+# ==========================================================
+
+architecture:
+
+  image:
+
+  modules:
+
+    - Grid Manager
+
+    - Turn Manager
+
+    - Unit System
+
+    - Camera Pawn
+
+    - Game Controller
+
+# ==========================================================
+# PORTFOLIO DISPLAY
+# ==========================================================
+
+display:
+
+  order: 2
+
+  showOnHome: true
+
+  showInFeatured: true
+
+  showTimeline: true
+
+# ==========================================================
+# CALL TO ACTION
+# ==========================================================
+
+cta:
+
+  title: Explore the Source Code
+
+  description: >
+    Browse the complete Unreal Engine C++ prototype, Blueprint graphs,
+    documentation, and gameplay implementation.
+
+  primary:
+
+    text: View GitHub
+
+    url: https://github.com/ABIKARTHICKGDEV/Ethernal-check-prototype
+
+  secondary:
+
+    text: LinkedIn Showcase
+
+    url: https://www.linkedin.com/posts/abikarthick_unrealengine-ue5-cpp-ugcPost-7490040464524378112-_zhz/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFSOB30BmmB1CU-K0qKbTzBatWHrXxYbp5U
